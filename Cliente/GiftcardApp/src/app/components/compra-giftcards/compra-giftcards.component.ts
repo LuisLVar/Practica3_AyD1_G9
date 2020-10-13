@@ -15,7 +15,7 @@ export class CompraGiftcardsComponent implements OnInit {
   public cantidad: number = 0;
   public precio: number = 0;
   
-  public carrito = [];
+  public carrito: any = [];
   constructor(private compraService: CompraGiftcardsService) { }
 
   ngOnInit(): void {
@@ -47,6 +47,7 @@ export class CompraGiftcardsComponent implements OnInit {
 
   Obtener_GiftCard(item: any){
     this.giftcard = item;
+    this.cantidad = 0;
     this.Verificar_Existencia();
     this.Buscar_precio();
   }
@@ -56,6 +57,7 @@ export class CompraGiftcardsComponent implements OnInit {
       // existe 
       let index = this.carrito.findIndex(e => e.id === this.giftcard.id);
       this.giftcard = this.carrito[index];
+      console.log(this.giftcard);
       this.cantidad = this.giftcard.cantidad;
       return true;
     }
@@ -66,29 +68,31 @@ export class CompraGiftcardsComponent implements OnInit {
     if(this.lista_precio.filter( e => e.id === this.giftcard.id).length > 0){
       let index = this.lista_precio.findIndex(e => e.id === this.giftcard.id);
       this.precio = this.lista_precio[index].total;
+    }else{
+      this.precio = 0;
     }
   }
 
   Guardar_Compra_Tarjeta():boolean{
     let tarjeta = {
-      nombre: this.giftcard.name,
+      name: this.giftcard.name,
       id: this.giftcard.id,
       cantidad: this.cantidad,
       total: this.cantidad * this.precio
     }
+    console.log(tarjeta);
 
     if(this.carrito.filter( e => e.id === this.giftcard.id).length > 0){
       // existe 
       let index = this.carrito.findIndex(e => e.id === this.giftcard.id);
       this.carrito[index] = tarjeta;
-      console.log(this.carrito);
+      //console.log(this.carrito);
       return true;
     }else{
       //no existe
-      this.carrito.push(this.carrito);
+      this.carrito.push(tarjeta);
       console.log(this.carrito);
       return false;
     }
   }
-
 }
