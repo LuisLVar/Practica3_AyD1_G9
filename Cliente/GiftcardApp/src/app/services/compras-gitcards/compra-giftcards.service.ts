@@ -8,10 +8,14 @@ export class CompraGiftcardsService {
 
   constructor(private http: HttpClient) { }
   
-  API_URI = 'https://my-json-server.typicode.com/CoffeePaw/AyD1API/Card';
+  API_URI = 'https://my-json-server.typicode.com/CoffeePaw/AyD1API';
 
   getCards (){
-    return this.http.get(this.API_URI);
+    return this.http.get(this.API_URI+'/Card');
+  }
+
+  getPrecio(){
+    return this.http.get(`${this.API_URI}/Value`);
   }
 
 }
