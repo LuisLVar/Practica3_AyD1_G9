@@ -30,6 +30,9 @@ describe('LoginComponent', () => {
     it("Prueba para pass, debe ser '' ", () => {
       expect(component.pass).toEqual('');
     });
+    it("Prueba para message, tiene que ser definido ", () => {
+      expect(component.pass).toBeUndefined();
+    });
   });
 
   describe('Testing a funcion resetVal()', () => {
@@ -44,6 +47,27 @@ describe('LoginComponent', () => {
       const auxPass  = ''
       component.resetVal();
       expect(auxPass ).toBe(component.user);
+    });
+  });
+
+  describe('Testing a funcion ingresar()', () => {
+    it("Si las variables user y pass se encuentran vacia, message lanza mensaje de error ", () => {
+      component.ingresar();
+      expect(component.message).not.toBe('');
+    });
+    it("Si la variable user se encuentran vacia, message lanza mensaje de warning", () => {
+      component.ingresar();
+      expect(component.message).toBe("Ingrese usuario o correo "+"Dato requerido");
+    });
+    it("Si la variable pass se encuentran vacia, message lanza mensaje de warning", () => {
+      component.ingresar();
+      expect(component.message).toEqual("Ingrese contraseña "+"Dato requerido");
+    });
+    it("Si, todo es correcto se llama a los datos", () => {
+      component.user = 'chay'
+      component.pass = 'admin123'
+      component.ingresar();
+      expect(component.message).not.toBe('');
     });
   });
 

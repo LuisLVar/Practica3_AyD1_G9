@@ -9,6 +9,7 @@ export class LoginComponent implements OnInit {
 
   user:string = ''
   pass:string = ''
+  message:string = ''
 
   constructor() { }
 
@@ -21,14 +22,18 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar(){
-    if(this.user === ''){
-      console.log("Ingrese usuario o correo","Dato requerido")
+    if(this.user === '' && this.pass === ''){
+      this.message = "Ingrese usuario o correo "+"Dato requerido"
+    }
+    else if(this.user === ''){
+      this.message = "Ingrese usuario o correo "+"Dato requerido"
     }
     else if(this.pass === ''){
-      console.log("Ingrese contraseña","Dato requerido")
+      this.message = "Ingrese contraseña "+"Dato requerido"
     }
     else{
-
+      this.message = 'success'
+      this.resetVal()
     }
   }
 }
