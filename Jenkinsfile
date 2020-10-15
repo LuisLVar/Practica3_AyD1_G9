@@ -6,7 +6,7 @@ pipeline {
       steps { bat 'npm install' }
     }
      stage('Unit tests') {
-            steps { sh 'npm run-script test' }
+            steps { bat 'npm run-script test' }
         }
     
   }
