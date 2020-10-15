@@ -9,7 +9,7 @@ pipeline {
             steps { 
                     bat """
                          c:
-                         cd 'C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9' 
+                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\"
                          npm run-script test
                          """
                     }
