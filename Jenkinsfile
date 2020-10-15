@@ -14,7 +14,7 @@ pipeline {
                     bat """
                          c:
                          cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
-                         ng test
+                         npm run ng test
                          """
                     }
         }
