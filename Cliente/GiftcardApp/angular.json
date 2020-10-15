@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GiftcardApp"
+    }
+  },
+  "defaultProject": "GiftcardApp",
+  "cli": {
+    "analytics": false
+  }
 }
