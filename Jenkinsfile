@@ -22,7 +22,7 @@ pipeline {
                     }
         }
 
-    stage('Unit tests') {
+    stage('Build') {
             steps { 
                     bat """
                          c:
