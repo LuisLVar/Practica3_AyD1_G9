@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS ayd1_practica3;
+CREATE DATABASE IF NOT EXISTS ayd1_practica3;
+
