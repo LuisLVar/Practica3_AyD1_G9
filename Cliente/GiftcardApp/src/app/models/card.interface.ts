@@ -4,7 +4,7 @@ export interface Card{
     image: string;
     chargeRate: number;
     active: boolean;
-    availability: []
+    availability: Array<any>
 };
 
 export interface Value{

@@ -52,24 +52,13 @@ export class CompraGiftcardsComponent implements OnInit {
   Obtener_GiftCard(item: any){
     this.giftcard = item;
     this.cantidad = 0;
-    this.Buscar_precios();
+    this.precios_tarjeta = this.Buscar_precios();
   }
 
-  // Verificar si ya se agrego a la lista
-  Verificar_Existencia(): boolean{
-    if(this.carrito.filter( e => e.id === this.giftcard.id).length >0){
-      // existe 
-      let index = this.carrito.findIndex(e => e.id === this.giftcard.id);
-      this.giftcard = this.carrito[index];
-      console.log(this.giftcard);
-      this.cantidad = this.giftcard.cantidad;
-      return true;
-    }
-    return false;
-  }
 
-  Buscar_precios(){
-    console.log(this.giftcard);
+
+  Buscar_precios(): any{
+    //console.log(this.giftcard);
     var precios = [];
     this.lista_precio.forEach(element => {
       var index = this.giftcard.availability.find( e => e == element.id);
@@ -77,7 +66,7 @@ export class CompraGiftcardsComponent implements OnInit {
         precios.push(element.total);
       }
     });
-    this.precios_tarjeta = precios;
+    return precios;
   }
 
   Guardar_Compra_Tarjeta(){
