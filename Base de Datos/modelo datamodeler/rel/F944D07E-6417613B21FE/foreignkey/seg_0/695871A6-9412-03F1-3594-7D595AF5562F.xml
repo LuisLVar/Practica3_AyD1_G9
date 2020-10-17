@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="695871A6-9412-03F1-3594-7D595AF5562F" containerWithKeyObject="AB2B752B-4261-B668-F2D0-430CFF88FD6F" localFKIndex="DBE39D74-BAFA-EE95-0D2F-E229AA17CEA0" name="aviability_value_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:01:45 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<referredTableLongName>value</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EAE5C81A-A474-9354-2768-A683FA1ED31A</referredTableID>
+<keyObject>275F3222-7C9A-3570-364C-8733BE02CDC0</keyObject>
+<referredKeyID>275F3222-7C9A-3570-364C-8733BE02CDC0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="aviability_value_FK" directorySegmentName="seg_0" id="E5606ADD-235E-F2D3-7797-6718CE5E3105">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>695871A6-9412-03F1-3594-7D595AF5562F</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<sourcePk>1A71CB1F-354B-4DB8-07B0-C199B613E3DE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>73D7CBE2-97B4-CEC6-53D5-857EBE547EB3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>992B8B99-F78B-0571-8692-282961179373</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

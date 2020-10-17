@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="factura_usuario_FK" directorySegmentName="seg_0" id="A4140433-0044-3F28-0818-27DF0825E777">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>F854DD78-B96B-842B-CA86-BAFFE40B000E</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<sourcePk>41438E48-3338-B428-A644-AE785B27768F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1F5CFF0D-9913-9A59-A6C5-6D67E4AAA050</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3B0A043A-924F-6470-341E-0E94C5781398</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED246D7D-2C8D-AD67-38C2-750C9EB7269F" name="detalle_factura">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 03:54:45 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="factura_no_factura" id="08F6B227-84A5-07FD-6444-AC4127831F7F">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:16 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7B8882A-25D6-A67A-93CE-94F0D0009562" referredColumn="7514EBEE-766B-FA27-E850-6418892BDEA9"/>
+</associations>
+</Column>
+<Column name="giftcard" id="5AD01B9D-9662-7610-9A9A-7D2D97C192EA">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:43 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E39F97EF-267E-5E66-9E77-5D7088AABB6F" referredColumn="6148BC6F-60E4-0122-1E96-4B21A5432AB3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31D04678-C44C-5889-D68C-B20EE2450E3F" name="detalle_factura_factura_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:16 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08F6B227-84A5-07FD-6444-AC4127831F7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC379608-ED00-04F5-32C1-5AB3F7B094E7" name="detalle_factura_giftcard_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:43 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AD01B9D-9662-7610-9A9A-7D2D97C192EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
