@@ -14,9 +14,6 @@
                 {{card.name}}
             </div>
                 <img class="card-img-top" style="width: 100%; height: 250px;"  [src] = "card.image">
-            <div class="card-body">
-                <p>{{card.chargeRate}}</p>
-            </div>
             <button type="button" 
             class="btn btn-info" 
             data-toggle="modal" 
@@ -55,10 +52,13 @@
                     <input type="number" id="cantidad" class="form-control" name="cantidad" [(ngModel)]="cantidad">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Precio</label>
+                    <label for="formGroupExampleInput">Precios</label>
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput">{{this.precio}}</label>
+                    <select name="seleccion" [(ngModel)] = "precio">
+                        <option selected>Seleccione el precio</option>
+                        <option [value] = "item" *ngFor="let item of precios_tarjeta">{{item}}</option>
+                    </select>
                 </div>
             </form>
 
