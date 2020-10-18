@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TarifaService } from '../../services/tarifa.service';
 
 @Component({
   selector: 'app-administrador',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdministradorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tarifaService: TarifaService) { }
 
   ngOnInit(): void {
+    this.mostrarTarifa();
+  }
+
+  mostrarCatalogo() { 
+    
+  }
+
+  mostrarTarifa() { 
+    let x = this.tarifaService.getTarifa();
+    console.log(x);
   }
 
 }
