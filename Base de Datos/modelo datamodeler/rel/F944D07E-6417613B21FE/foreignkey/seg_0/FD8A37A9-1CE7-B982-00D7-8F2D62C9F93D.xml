@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FD8A37A9-1CE7-B982-00D7-8F2D62C9F93D" containerWithKeyObject="3ED0F176-F1AA-F4FB-A904-FA82387E4C84" localFKIndex="6F074955-047E-1DD2-AEB9-B58AF5471B09" name="factura_tarjeta_credito_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:30:28 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<referredTableLongName>tarjeta_credito</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>223D5450-2516-9D33-A9A8-E4A26A3D206B</referredTableID>
+<keyObject>A7D1215D-E146-D8C2-C9F9-2B6BB11B1187</keyObject>
+<referredKeyID>A7D1215D-E146-D8C2-C9F9-2B6BB11B1187</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

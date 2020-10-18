@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3ED0F176-F1AA-F4FB-A904-FA82387E4C84" name="factura">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 03:54:29 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="no_factura" id="7514EBEE-766B-FA27-E850-6418892BDEA9">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:04 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario" id="02AEE354-2843-5A41-0E74-483381DED5F3">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:50 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F854DD78-B96B-842B-CA86-BAFFE40B000E" referredColumn="9E3B572C-C397-5F17-DDFD-DE45E2048B58"/>
+</associations>
+</Column>
+<Column name="tarjeta_credito" id="625F4806-D28B-E73F-105C-386CA052EE57">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:30:28 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD8A37A9-1CE7-B982-00D7-8F2D62C9F93D" referredColumn="964790AD-0ED1-C72B-CACA-D9EA90800279"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75252C2A-BEE7-D4B6-B071-B8D8DB32BECE" name="factura_PK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:13 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7514EBEE-766B-FA27-E850-6418892BDEA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B70C971B-AF88-CB57-E07C-D18D3BCF23C8" name="factura_usuario_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:50 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02AEE354-2843-5A41-0E74-483381DED5F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F074955-047E-1DD2-AEB9-B58AF5471B09" name="factura_tarjeta_credito_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:30:28 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="625F4806-D28B-E73F-105C-386CA052EE57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
