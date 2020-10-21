@@ -1,7 +1,9 @@
 
 <div class="row">
     <div class="col-2">
-        <button class="btn btn-success">
+        <button class="btn btn-success" data-toggle="modal" 
+            data-target="#carro" 
+            id="compra_carro">
             Ver Carrito
         </button>
     </div>
@@ -66,6 +68,37 @@
         <div class="modal-footer">
             <button id="btnGuardar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
             <button id="btnGuardar" type="button" class="btn btn-success" data-dismiss="modal" (click)="Guardar_Compra_Tarjeta()">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="carro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lista de productos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of carrito">
+                            <p class="card-text">
+                                {{item.name}} cantidad: {{item.cantidad}} total: {{item.total}}
+                            </p>
+                        </li>
+                      </ul>
+                </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+            <button id="btnGuardar" type="button" class="btn btn-danger" data-dismiss="modal">Seguir Agregando</button>
+            <button id="btnGuardar" type="button" class="btn btn-success" data-dismiss="modal" (click)="Navegar()" >Comprar</button>
         </div>
       </div>
     </div>

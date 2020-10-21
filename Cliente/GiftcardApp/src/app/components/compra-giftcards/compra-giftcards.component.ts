@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CompraGiftcardsService} from '../../services/compras-gitcards/compra-giftcards.service';
 
 import {Card, Value} from '../../models/card.interface';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-compra-giftcards',
@@ -20,7 +21,7 @@ export class CompraGiftcardsComponent implements OnInit {
   public precio: number = 0;
   
   public carrito: any = [];
-  constructor(private compraService: CompraGiftcardsService) { }
+  constructor(private compraService: CompraGiftcardsService, private router: Router) { }
 
   ngOnInit(): void {
     this.listar_Tarjetas();
@@ -77,5 +78,11 @@ export class CompraGiftcardsComponent implements OnInit {
       tipo_giftcard : this.giftcard.id
     }
     this.carrito.push(tarjeta);
+    console.log(this.carrito)
+  }
+
+  Navegar(){
+    localStorage.setItem('carro', JSON.stringify(this.carrito));
+    this.router.navigate(['/pago']);
   }
 }
