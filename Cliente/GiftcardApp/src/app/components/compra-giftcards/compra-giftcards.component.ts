@@ -75,7 +75,8 @@ export class CompraGiftcardsComponent implements OnInit {
       name: this.giftcard.name,
       cantidad: this.cantidad,
       total: this.cantidad * this.precio,
-      tipo_giftcard : this.giftcard.id
+      tipo_giftcard : this.giftcard.id,
+      precio: this.precio
     }
     this.carrito.push(tarjeta);
     console.log(this.carrito)
