@@ -19,6 +19,8 @@ export class PagoTarjetaComponent implements OnInit {
 
   public pago: Pago = {};
 
+  public codigo: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -95,7 +97,7 @@ export class PagoTarjetaComponent implements OnInit {
       }
       
     }
-    console.log(nuevo);
+    this.pago.no_tarjeta = nuevo;
     return nuevo;
   }
 
