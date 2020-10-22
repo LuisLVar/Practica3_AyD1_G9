@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CompraGiftcardsComponent } from './compra-giftcards.component';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 import { Card, Value } from 'src/app/models/card.interface';
 import { ThrowStmt } from '@angular/compiler';
 
@@ -45,7 +46,8 @@ describe('CompraGiftcardsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ CompraGiftcardsComponent ],
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        RouterTestingModule
       ]
     })
     .compileComponents();
@@ -107,7 +109,8 @@ describe('CompraGiftcardsComponent', () => {
             name: 'PlayStation',
             cantidad: 5,
             total: 50,
-            tipo_giftcard: '2'
+            tipo_giftcard: '2',
+            precio: 10
           }
         ]
       )

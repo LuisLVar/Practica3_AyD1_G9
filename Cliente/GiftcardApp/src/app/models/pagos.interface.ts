@@ -14,3 +14,11 @@ export interface Tarjeta{
     value: number;
     codigo: string;
 }
+
+export interface Carro {
+    name:string; 
+    cantidad:number;
+    total:number;
+    tipo_giftcard:number; 
+    precio:number;
+}
