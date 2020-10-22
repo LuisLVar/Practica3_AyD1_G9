@@ -24,7 +24,7 @@ export class PagoTarjetaComponent implements OnInit {
   ngOnInit(): void {
     this.Obtener_Carrito();
     this.check.value1 = '0';
-    this.Obtener_Total();
+    this.pago.total =  this.Obtener_Total();
   }
 
 
@@ -43,6 +43,8 @@ export class PagoTarjetaComponent implements OnInit {
 
   // Todo cambiar el codigo del dueño
   Dividir_Tarjetas(){
+    this.Encriptar();
+
     this.pago.tarjetas = [];
     for (let index = 0; index < this.carrito?.length; index++) {
       const e = this.carrito[index];
@@ -59,7 +61,18 @@ export class PagoTarjetaComponent implements OnInit {
     }
     console.log(this.pago.tarjetas);
   }
+
+  Cambio_Moneda(){
+
+  }
   
+  Verificar_Numero(object: any ){
+    if(object.length === object.maxLength){
+      console.log('Numero valido');
+    }else {
+      console.log('Numeo invalido ')
+    }
+  }
 
   Funcion_Generar(){
     let result;
@@ -69,6 +82,21 @@ export class PagoTarjetaComponent implements OnInit {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+  }
+
+  Encriptar(){
+    var codiogS = this.pago.no_tarjeta.toString();
+    var nuevo = ''
+    for (let index = 0; index < codiogS.length; index++) {
+      if(index < 4 || index >= 12){
+        nuevo = nuevo + codiogS[index];
+      }else if(index >= 4  && index <= 11){
+        nuevo= nuevo + 'x';
+      }
+      
+    }
+    console.log(nuevo);
+    return nuevo;
   }
 
 }

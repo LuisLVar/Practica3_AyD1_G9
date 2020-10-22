@@ -1,11 +1,11 @@
 export interface Pago {
-    no_tarjeta?: number;
+    no_tarjeta?: string | number;
     mes?: string;
     anio?: string;
     cvv2?: number;
     total?: number;
     tarjetas?: Array<Tarjeta>;
-
+    nombre?: string
 }
 
 export interface Tarjeta{

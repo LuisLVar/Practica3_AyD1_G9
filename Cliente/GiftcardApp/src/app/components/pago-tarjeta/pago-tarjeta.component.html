@@ -6,22 +6,28 @@
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Numero Tarjeta</label>
-                <input type="number" class="form-control"  name="numero" autofocus>
+                <input type="number" class="form-control" 
+                name="no_tarjeta" autofocus [(ngModel)]="pago.no_tarjeta">
               </div>
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Nombre tarjeta</label>
-                <input type="text" class="form-control"  name="nombre" >
+                <input type="text" class="form-control"  name="nombre" [(ngModel)]="pago.nombre">
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Fecha Expiracion MM/YY</label>
-                <input type="text" class="form-control"  name="nombre" >
+                <label for="exampleInputEmail1">Fecha Expiracion MM</label>
+                <input type="number" class="form-control"  name="mes" [(ngModel)]="pago.mes" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Expiracion YY</label>
+                <input type="text" class="form-control"  name="anio" [(ngModel)]="pago.anio" >
               </div>
 
               <div class="form-group">
                 <label for="exampleInputEmail1">Codigo</label>
-                <input type="number" class="form-control"  name="codigo" >
+                <input type="number" class="form-control"  name="cvv2" [(ngModel)]="pago.cvv2">
               </div>
 
               <div class="form-group">
