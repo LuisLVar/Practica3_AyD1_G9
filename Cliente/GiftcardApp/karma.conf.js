@@ -27,10 +27,8 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     /*browsers: ['Chrome'],
-    singleRun: false,*/
+    singleRun: false,
     /*Sirve para jenkins */
-    /*browsers: ['PhantomJS'],
-    singleRun: true,*/
     customLaunchers: {
       ChromeHeadless: {
         base: 'Chrome',
@@ -44,7 +42,7 @@ module.exports = function (config) {
     },
     browsers: ['ChromeHeadless'],
     singleRun: true,
-    
+    /*Sirve para jenkins */
     restartOnFileChange: true
   });
 };
