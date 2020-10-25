@@ -7,18 +7,25 @@ pipeline {
     stage('Install') {
         
       steps {  sh '''
+                  cd Cliente/GiftcardApp
                   npm install
                 ''' }
     }
      stage('Unit tests') {
             steps { 
-                    sh 'npm run ng test'
+                   sh '''
+                  cd Cliente/GiftcardApp
+                    npm run ng test'
+                    '''
                     }
         }
 
     stage('Build') {
             steps { 
-                    sh 'npm run ng build'
+                    sh '''
+                  cd Cliente/GiftcardApp
+                    npm run ng build'
+                    '''
                     }
         }
     
