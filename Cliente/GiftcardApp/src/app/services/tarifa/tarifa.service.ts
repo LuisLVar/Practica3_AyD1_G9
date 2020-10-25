@@ -12,4 +12,24 @@ export class TarifaService {
     return this.http.get(`https://my-json-server.typicode.com/CoffeePaw/AyD1API/TasaCambio`);
   }
 
+  tarifa: number;
+
+  getTarifaSubscribe() { 
+    this.getTarifa().subscribe(
+      res => {
+        this.tarifa = res[0].total;
+        return this.tarifa;
+      },
+      err => { console.log(err)
+        return 0;
+      }
+    );
+  }
+
+  getConversionTarifa(x: number) {  
+    return x * 7.77;
+  }
+
+
+
 }
