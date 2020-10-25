@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistroService } from '../../services/registro.service'
+
 
 @Component({
   selector: 'app-registro',
