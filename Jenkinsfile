@@ -6,7 +6,7 @@ pipeline {
     stages {
     stage('Install') {
         
-      steps {  sh '''cd Practica3_AyD1_G9
+      steps {  sh '''
                   npm install
                 ''' }
     }
