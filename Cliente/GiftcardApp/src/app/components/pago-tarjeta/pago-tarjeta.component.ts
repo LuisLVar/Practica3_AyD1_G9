@@ -61,7 +61,8 @@ export class PagoTarjetaComponent implements OnInit {
         this.pago.tarjetas.push(tarjeta);
       }
     }
-    console.log(this.pago.tarjetas);
+    console.log(this.pago);
+    //console.log(this.pago.no_tarjeta);
   }
 
   Cambio_Moneda(){
@@ -77,7 +78,7 @@ export class PagoTarjetaComponent implements OnInit {
   }
 
   Funcion_Generar(){
-    let result;
+    let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
     for (let i = 0; i < 8; i++) {
@@ -88,17 +89,18 @@ export class PagoTarjetaComponent implements OnInit {
 
   Encriptar(){
     var codiogS = this.pago.no_tarjeta.toString();
+    
     var nuevo = ''
     for (let index = 0; index < codiogS.length; index++) {
       if(index < 4 || index >= 12){
         nuevo = nuevo + codiogS[index];
       }else if(index >= 4  && index <= 11){
-        nuevo= nuevo + 'x';
+        nuevo= nuevo + 'X';
       }
       
     }
     this.pago.no_tarjeta = nuevo;
-    return nuevo;
+    //return nuevo;
   }
 
 }
