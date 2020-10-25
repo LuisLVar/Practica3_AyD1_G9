@@ -6,29 +6,17 @@ pipeline {
     stages {
     stage('Install') {
         
-      steps {  bat """
-                         c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
-                         npm install
-                         """ }
+      steps {  sh 'npm install' }
     }
      stage('Unit tests') {
             steps { 
-                    bat """
-                         c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
-                         npm run ng test
-                         """
+                    sh 'npm run ng test'
                     }
         }
 
     stage('Build') {
             steps { 
-                    bat """
-                         c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
-                         npm run ng build
-                         """
+                    sh 'npm run ng build'
                     }
         }
     
