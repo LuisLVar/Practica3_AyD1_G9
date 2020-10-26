@@ -1,11 +1,11 @@
 export interface Usuario{
-  id?:string,
+  id?:number,
+  username?:string,
   correo?:string,
-  password?:string,
-  nombre?:string,
-  apellido?:string,
-  dpi?:number,
-  edad?:number,
-  tarjetas?:any[],
-  transaccion?:any[]
+  contrasenia?:string,
+  nombres?:string,
+  apellidos?:string,
+  cui?:string,
+  fecha_nacimiento?: Date,
+  tipo_usuario?:number
 }
