@@ -8,19 +8,30 @@ import { AdministradorComponent } from './components/administrador/administrador
 import {FormsModule} from '@angular/forms'
 import { LoginComponent } from './components/login/login.component';
 
+
+
+
+import { CompraGiftcardsComponent } from './components/compra-giftcards/compra-giftcards.component';
+import {CompraGiftcardsService} from '../app/services/compras-gitcards/compra-giftcards.service';
+import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AdministradorComponent,
-    LoginComponent
+    LoginComponent,
+    CompraGiftcardsComponent,
+    PagoTarjetaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    CompraGiftcardsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

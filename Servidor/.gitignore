@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # dependencies
 /node_modules
@@ -12,3 +13,6 @@
 
 # misc
 npm-debug.log
+=======
+/node_modules
+>>>>>>> feature/compra_giftcards
