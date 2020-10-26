@@ -71,15 +71,21 @@ export class CompraGiftcardsComponent implements OnInit {
   }
 
   Guardar_Compra_Tarjeta(){
-    let tarjeta = {
-      name: this.giftcard.name,
-      cantidad: this.cantidad,
-      total: this.cantidad * this.precio,
-      tipo_giftcard : this.giftcard.id,
-      precio: this.precio
+    if(this.cantidad > 0){
+      let tarjeta = {
+        name: this.giftcard.name,
+        cantidad: this.cantidad,
+        total: this.cantidad * this.precio,
+        tipo_giftcard : this.giftcard.id,
+        precio: this.precio
+      }
+      this.carrito.push(tarjeta);
+      console.log(this.carrito)
+      this.cantidad = 0;
+    }else{
+      alert("No se han agregado tarjetas al carrito")
     }
-    this.carrito.push(tarjeta);
-    console.log(this.carrito)
+
   }
 
   Navegar(){

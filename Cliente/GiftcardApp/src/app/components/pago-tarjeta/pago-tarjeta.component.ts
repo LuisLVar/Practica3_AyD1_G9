@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Carro, Pago, Tarjeta} from '../../models/pagos.interface';
+import { CompraGiftcardsService } from '../../services/compras-gitcards/compra-giftcards.service';
 
 @Component({
   selector: 'app-pago-tarjeta',
@@ -21,7 +22,7 @@ export class PagoTarjetaComponent implements OnInit {
 
   public codigo: boolean = false;
 
-  constructor() { }
+  constructor(private compraService: CompraGiftcardsService) { }
 
   ngOnInit(): void {
     this.Obtener_Carrito();
@@ -32,6 +33,7 @@ export class PagoTarjetaComponent implements OnInit {
 
   Obtener_Carrito(){
     this.carrito = JSON.parse(localStorage.getItem('carro'));
+    localStorage.clear();
     //console.log(this.carrito);
   }
 
@@ -65,8 +67,15 @@ export class PagoTarjetaComponent implements OnInit {
     //console.log(this.pago.no_tarjeta);
   }
 
-  Cambio_Moneda(){
-
+  Comprar_tarjeta(){
+    this.compraService.Comprar(this.pago).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    )
   }
   
   Verificar_Numero(object: any ){
