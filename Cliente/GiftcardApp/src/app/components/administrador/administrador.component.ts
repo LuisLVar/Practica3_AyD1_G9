@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TarifaService } from '../../services/tarifa/tarifa.service';
+import { AdministradorService } from '../../services/administrador/administrador.service';
 
 @Component({
   selector: 'app-administrador',
@@ -8,10 +9,11 @@ import { TarifaService } from '../../services/tarifa/tarifa.service';
 })
 export class AdministradorComponent implements OnInit {
 
-  constructor(private tarifaService: TarifaService) { }
+  constructor(private tarifaService: TarifaService, private adminService : AdministradorService) { }
 
   ngOnInit(): void {
-    this.getTarifa();
+    // this.getTarifa();
+    this.getCatalogo();
   }
 
   mostrarCatalogo() { 
@@ -19,6 +21,8 @@ export class AdministradorComponent implements OnInit {
   }
 
   tarifa: number = 0;
+
+  catalogo: any;
 
   getTarifa() { 
     this.tarifaService.getTarifa().subscribe(
@@ -34,4 +38,13 @@ export class AdministradorComponent implements OnInit {
     return x * this.tarifa;
   }
 
+  getCatalogo() { 
+    this.adminService.getCatalogo().subscribe(
+      res => {
+        this.catalogo = res;
+        console.log(this.catalogo);
+      },
+      err => console.log(err)
+    );
+  }
 }
