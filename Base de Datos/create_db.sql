@@ -14,7 +14,7 @@ CREATE TABLE detalle_factura (
 );
 
 CREATE TABLE factura (
-    no_factura       INTEGER NOT NULL,
+    no_factura       INTEGER NOT NULL  AUTO_INCREMENT,
     usuario          INTEGER NOT NULL,
     tarjeta_credito  INTEGER NOT NULL
 );
@@ -22,7 +22,7 @@ CREATE TABLE factura (
 ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( no_factura );
 
 CREATE TABLE giftcard (
-    id             VARCHAR(8) NOT NULL,
+    id             VARCHAR(8) NOT NULL  AUTO_INCREMENT,
     tipo_giftcard  INTEGER NOT NULL,
     duenio         INTEGER NOT NULL,
     value          INTEGER NOT NULL
@@ -31,7 +31,7 @@ CREATE TABLE giftcard (
 ALTER TABLE giftcard ADD CONSTRAINT giftcard_pk PRIMARY KEY ( id );
 
 CREATE TABLE tarjeta_credito (
-    id          INTEGER NOT NULL,
+    id          INTEGER NOT NULL  AUTO_INCREMENT,
     no_tarjeta  VARCHAR(20) NOT NULL,
     mes         INTEGER NOT NULL,
     anio        INTEGER NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE tarjeta_credito (
 ALTER TABLE tarjeta_credito ADD CONSTRAINT tarjeta_credito_pk PRIMARY KEY ( id );
 
 CREATE TABLE tipo_giftcard (
-    id          INTEGER NOT NULL,
+    id          INTEGER NOT NULL  AUTO_INCREMENT,
     name        VARCHAR(50) NOT NULL,
     image       VARCHAR(300) NOT NULL,
     chargerate  INTEGER NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE tipo_giftcard (
 ALTER TABLE tipo_giftcard ADD CONSTRAINT tipo_giftcard_pk PRIMARY KEY ( id );
 
 CREATE TABLE tipo_usuario (
-    id            INTEGER NOT NULL,
+    id            INTEGER NOT NULL AUTO_INCREMENT,
     tipo_usuario  VARCHAR(100) NOT NULL
 );
 
@@ -60,7 +60,7 @@ ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id );
 ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario__un UNIQUE ( tipo_usuario );
 
 CREATE TABLE usuario (
-    id                INTEGER NOT NULL,
+    id                INTEGER NOT NULL  AUTO_INCREMENT,
     username          VARCHAR(50) NOT NULL,
     correo            VARCHAR(100) NOT NULL,
     contrasenia       VARCHAR(50) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE usuario (
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id );
 
 CREATE TABLE value (
-    id     INTEGER NOT NULL,
+    id     INTEGER NOT NULL AUTO_INCREMENT,
     value  INTEGER NOT NULL
 );
 
