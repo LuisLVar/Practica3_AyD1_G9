@@ -24,10 +24,9 @@ CREATE TABLE giftcard (
     id             VARCHAR(8) NOT NULL,
     tipo_giftcard  INTEGER NOT NULL,
     duenio         INTEGER NOT NULL,
-    value          INTEGER NOT NULL
+    value          INTEGER NOT NULL,
+    CONSTRAINT giftcard_pk PRIMARY KEY ( id )
 );
-
-ALTER TABLE giftcard ADD CONSTRAINT giftcard_pk PRIMARY KEY ( id );
 
 CREATE TABLE tarjeta_credito (
     id          INTEGER NOT NULL  AUTO_INCREMENT,
@@ -50,10 +49,9 @@ CREATE TABLE tipo_giftcard (
 CREATE TABLE tipo_usuario (
     id            INTEGER NOT NULL AUTO_INCREMENT,
     tipo_usuario  VARCHAR(100) NOT NULL,
-    CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id )
+    CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id ),
+    CONSTRAINT tipo_usuario__un UNIQUE ( tipo_usuario )
 );
-
-ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario__un UNIQUE ( tipo_usuario );
 
 CREATE TABLE usuario (
     id                INTEGER NOT NULL  AUTO_INCREMENT,
@@ -65,16 +63,15 @@ CREATE TABLE usuario (
     cui               VARCHAR(15) NOT NULL,
     fecha_nacimiento  DATE NOT NULL,
     tipo_usuario      INTEGER NOT NULL,
-     CONSTRAINT usuario_pk PRIMARY KEY ( id )
+    CONSTRAINT usuario_pk PRIMARY KEY ( id )
 );
 
 CREATE TABLE value (
     id     INTEGER NOT NULL AUTO_INCREMENT,
     value  INTEGER NOT NULL,
-    CONSTRAINT value_pk PRIMARY KEY ( id )
+    CONSTRAINT value_pk PRIMARY KEY ( id ),
+    CONSTRAINT value__un UNIQUE ( value )
 );
-
-ALTER TABLE value ADD CONSTRAINT value__un UNIQUE ( value );
 
 ALTER TABLE availability
     ADD CONSTRAINT aviability_tipo_giftcard_fk FOREIGN KEY ( tipo_giftcard )
