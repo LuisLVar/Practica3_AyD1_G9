@@ -21,6 +21,7 @@ export class PagoTarjetaComponent implements OnInit {
   public pago: Pago = {};
 
   public codigo: boolean = false;
+  public usuario: any = {};
 
   constructor(private compraService: CompraGiftcardsService) { }
 
@@ -28,6 +29,10 @@ export class PagoTarjetaComponent implements OnInit {
     this.Obtener_Carrito();
     this.check.value1 = '0';
     this.pago.total =  this.Obtener_Total();
+  }
+
+  getUser(): void{
+    this.usuario = JSON.parse(localStorage.getItem('usuario'))[0];
   }
 
 
@@ -48,14 +53,14 @@ export class PagoTarjetaComponent implements OnInit {
   // Todo cambiar el codigo del dueño
   Dividir_Tarjetas(){
     this.Encriptar();
-
     this.pago.tarjetas = [];
     for (let index = 0; index < this.carrito?.length; index++) {
       const e = this.carrito[index];
       let cantidad = e.cantidad;
       for (let i = 0; i < cantidad; i++) {
         let tarjeta: Tarjeta = {
-          duenio: 0,
+          // TODO: OBTENER EL ID DEL USUARIO EN SESION
+          duenio: 2,
           tipo_giftcard: e.tipo_giftcard,
           value: e.precio,
           codigo: this.Funcion_Generar()
@@ -65,6 +70,7 @@ export class PagoTarjetaComponent implements OnInit {
     }
     console.log(this.pago);
     //console.log(this.pago.no_tarjeta);
+    this.Comprar_tarjeta();
   }
 
   Comprar_tarjeta(){

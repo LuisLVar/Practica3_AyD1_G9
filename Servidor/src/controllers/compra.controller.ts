@@ -29,6 +29,14 @@ class CompraController {
         })
 
     }
+
+    public async historial_compras(req: Request, res: Response){
+        const {id_usuario} = req.body;
+
+        const historial = await pool.query('call historial_compras(?)', [id_usuario]);
+
+        res.json(historial[0]);
+    }
 }
 
 export const compraController = new CompraController();

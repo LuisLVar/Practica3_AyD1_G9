@@ -10,6 +10,7 @@ class CompraRoutes{
     
     config(): void {
         this.router.post('/pago', compraController.Realizar_compra);
+        this.router.post('/historial', compraController.historial_compras);
     }
 }
 

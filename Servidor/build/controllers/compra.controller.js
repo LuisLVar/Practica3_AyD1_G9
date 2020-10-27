@@ -30,5 +30,12 @@ class CompraController {
             });
         });
     }
+    historial_compras(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id_usuario } = req.body;
+            const historial = yield database_1.default.query('call historial_compras(?)', [id_usuario]);
+            res.json(historial[0]);
+        });
+    }
 }
 exports.compraController = new CompraController();

@@ -9,6 +9,7 @@ class CompraRoutes {
     }
     config() {
         this.router.post('/pago', compra_controller_1.compraController.Realizar_compra);
+        this.router.post('/historial', compra_controller_1.compraController.historial_compras);
     }
 }
 const compraRoutes = new CompraRoutes();
