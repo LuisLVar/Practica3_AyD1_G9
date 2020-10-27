@@ -2,7 +2,6 @@
 import express, { Application } from 'express';//lo de los parentesis se define el tipo de dato
 import morgan from 'morgan'; //se pueden ver las peticiones que se hacen
 import cors from 'cors';
-import * as socketio from "socket.io";
 import apiRoutes from './routes/apiRoutes';
 
 class Server {//esta clase iniciara al servidor
