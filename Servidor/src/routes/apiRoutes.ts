@@ -10,7 +10,7 @@ class ApiRoutes{
     }
 
     config():void {
-
+        this.router.get('/aux/cards', apiController.getCardsAux);
     }
 
 }
