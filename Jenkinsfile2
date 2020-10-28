@@ -31,6 +31,19 @@ pipeline {
                          """
                     }
         }
+        
     
   }
+  post {
+            always {
+                mail to: 'gaby.z7guate@gmail.com',
+                subject: "Se completo el pipeline de la practica",
+                body: "Se ha terminado la compilación, porfavor revisa: ${env.BUILD_URL}"
+            }
+            failure{
+                mail to: 'gaby.z7guate@gmail.com',
+                subject: "Se completo el pipeline de la practica",
+                body: "Se ha terminado la compilación, porfavor revisa: ${env.BUILD_URL}. El pipeline fallo"
+            }
+        }
 }
