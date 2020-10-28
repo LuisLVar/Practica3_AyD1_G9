@@ -36,10 +36,7 @@ pipeline {
   }
   post {
             always {
-                mail to: 'gaby.z7guate@gmail.com',
-                subject: "Se completo el pipeline de la practica 3",
-                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}",
-                mail to: 'v.sdb.59@gmail.com',
+                mail to: 'gaby.z7guate@gmail.com','v.sdb.59@gmail.com',
                 subject: "Se completo el pipeline de la practica 3",
                 body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}"
             }
