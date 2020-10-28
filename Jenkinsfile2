@@ -37,13 +37,34 @@ pipeline {
   post {
             always {
                 mail to: 'gaby.z7guate@gmail.com',
-                subject: "Se completo el pipeline de la practica",
-                body: "Se ha terminado la compilación, porfavor revisa: ${env.BUILD_URL}"
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}"
+            }
+            always {
+                mail to: 'v.sdb.59@gmail.com',
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}"
             }
             failure{
                 mail to: 'gaby.z7guate@gmail.com',
-                subject: "Se completo el pipeline de la practica",
-                body: "Se ha terminado la compilación, porfavor revisa: ${env.BUILD_URL}. El pipeline fallo"
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}. El pipeline fallo"
             }
+            always {
+                mail to: 'luisvarleon12@gmail.com',
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}"
+            }
+            always {
+                mail to: 'gerardo15.chay97@gmail.com',
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}' , porfavor revisa: ${env.BUILD_URL}"
+            }
+            always {
+                mail to: 'fernandoxhajon122@gmail.com',
+                subject: "Se completo el pipeline de la practica 3",
+                body: "Se ha terminado la compilación '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisa: ${env.BUILD_URL}"
+            }
+           
         }
 }

@@ -8,7 +8,7 @@ module.exports = function(config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
-            require('karma-phantomjs-launcher'),
+            //require('karma-phantomjs-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
             require('@angular-devkit/build-angular/plugins/karma')
@@ -28,6 +28,7 @@ module.exports = function(config) {
         autoWatch: true,
         /*browsers: ['Chrome'],
         singleRun: false,
+
         /*Sirve para jenkins */
         customLaunchers: {
             ChromeHeadless: {
@@ -41,8 +42,10 @@ module.exports = function(config) {
             }
         },
         browsers: ['ChromeHeadless'],
+        //browsers: ['PhantomJS'],
         singleRun: true,
         /*Sirve para jenkins */
+        
         restartOnFileChange: true
     });
 };

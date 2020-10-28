@@ -8,14 +8,14 @@ pipeline {
         
       steps {  sh '''
                   cd Cliente/GiftcardApp
-                  npm install
+                  sudo npm install
                 ''' }
     }
      stage('Unit tests') {
             steps { 
                    sh '''
                   cd Cliente/GiftcardApp
-                    npm run ng test'
+                    sudo npm run ng test
                     '''
                     }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps { 
                     sh '''
                   cd Cliente/GiftcardApp
-                    npm run ng build'
+                    sudo npm run ng build
                     '''
                     }
         }
