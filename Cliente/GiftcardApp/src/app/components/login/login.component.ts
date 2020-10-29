@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ export class LoginComponent implements OnInit {
   pass:string = ''
   message:string = ''
 
-  constructor() { }
+  constructor(private _userService:LoginService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -32,8 +34,17 @@ export class LoginComponent implements OnInit {
       this.message = "Ingrese contraseña "+"Dato requerido"
     }
     else{
-      this.message = 'success'
-      this.resetVal()
+      this._userService.logIn({user:this.user, password: this.pass}).subscribe(
+        (res) => {
+          localStorage.setItem('usuario', JSON.stringify(res));
+          this.resetVal()
+          this.router.navigate(['/admin']);
+        },
+        err => {
+          console.error(err);
+          this.resetVal()
+        }
+      )
     }
   }
 }

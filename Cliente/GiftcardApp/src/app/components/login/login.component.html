@@ -10,14 +10,14 @@
         <form>
           <div class="form-group">
             <label for="inputEmail">Usuario o Correo </label>
-            <input type="email" class="form-control" id="inputEmail" >
+            <input type="email" class="form-control" id="inputEmail" name="user" [(ngModel)]="user">
           </div>
           <div class="form-group">
             <label for="inputEmail">Contraseña: </label>
-            <input type="password" class="form-control" id="inputPassword"  >
+            <input type="password" class="form-control" id="inputPassword" name="pass" [(ngModel)]="pass" >
           </div>
-          <button type="button" class="btn btn-warning btn-lg btn-singin">
-            <i class="fas fa-sign-in-alt icono"></i> Ingresar
+          <button type="button" class="btn btn-warning btn-lg btn-singin" (click)="ingresar()" >
+            <i class="fas fa-sign-in-alt icono" ></i> Ingresar
           </button>
         </form>
       </div>

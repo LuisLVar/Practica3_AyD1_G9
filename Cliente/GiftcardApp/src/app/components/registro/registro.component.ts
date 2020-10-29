@@ -10,15 +10,15 @@ import { Usuario } from '../../models/usuario'
 export class RegistroComponent implements OnInit {
 
   user:Usuario={
-    id:'',
+    id:0,
     correo:'',
-    password:'',
-    nombre:'',
-    apellido:'',
-    dpi:0,
-    edad:0,
-    tarjetas:[],
-    transaccion:[]
+    contrasenia:'',
+    username:'',
+    nombres:'',
+    apellidos:'',
+    cui:'',
+    fecha_nacimiento: new Date(),
+    tipo_usuario: 0
   }
 
   constructor(private _register:RegistroService) { }
@@ -27,6 +27,10 @@ export class RegistroComponent implements OnInit {
   }
 
   registrar(){
-
+    delete this.user.id
+    this._register.registro(this.user).subscribe(
+      res => console.log(res),
+      err => console.error(err)
+    )
   }
 }
