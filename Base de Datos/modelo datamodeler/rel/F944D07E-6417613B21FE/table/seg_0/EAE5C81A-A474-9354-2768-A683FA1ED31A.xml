@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EAE5C81A-A474-9354-2768-A683FA1ED31A" name="value">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 03:53:49 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B18885AD-270F-168D-7946-8C3F8657A4AC">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:20:24 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="value" id="A9FC9860-4706-42BD-4CA9-CAC416B28ED6">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:20:24 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="275F3222-7C9A-3570-364C-8733BE02CDC0" name="value_PK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:01:30 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B18885AD-270F-168D-7946-8C3F8657A4AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1A65BF8-B451-04DC-7B14-B42EB7BE1538" name="value__UN">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 19:20:08 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9FC9860-4706-42BD-4CA9-CAC416B28ED6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

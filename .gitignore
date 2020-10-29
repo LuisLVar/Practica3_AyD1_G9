@@ -1,6 +1,6 @@
 
 # dependencies
-/node_modules
+Servidor/node_modules
 
 # IDE - VSCode
 .vscode/*
@@ -12,3 +12,4 @@
 
 # misc
 npm-debug.log
+.scannerwork

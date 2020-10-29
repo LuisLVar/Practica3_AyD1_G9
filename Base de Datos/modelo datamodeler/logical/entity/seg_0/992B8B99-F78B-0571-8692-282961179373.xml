@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="992B8B99-F78B-0571-8692-282961179373" name="availability">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>AB2B752B-4261-B668-F2D0-430CFF88FD6F</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="value" id="3F18F977-729B-6F80-9000-E72B4D0F95D7">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>E5606ADD-235E-F2D3-7797-6718CE5E3105</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<referedAttribute>9822961E-B411-340F-DFAF-4EBA5C4029F2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo giftcard" id="ACA3B9FD-53F4-E69C-2514-4AB85770FC54">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>D1D82043-86FA-FB37-42FE-D3DC0BF471B9</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<referedAttribute>E333AC5B-4116-85FA-9316-F19D3E1659E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

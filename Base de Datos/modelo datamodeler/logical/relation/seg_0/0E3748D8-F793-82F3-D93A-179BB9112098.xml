@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="giftcard_usuario_FK" directorySegmentName="seg_0" id="0E3748D8-F793-82F3-D93A-179BB9112098">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:49:27 UTC</createdTime>
+<generatorID>13BF159B-A60D-C714-9168-7876E7268215</generatorID>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<engineerTo>
+<item key="F944D07E-8444-C33A-1191-6417613B21FE" value="true"/>
+</engineerTo>
+<sourcePk>41438E48-3338-B428-A644-AE785B27768F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1F5CFF0D-9913-9A59-A6C5-6D67E4AAA050</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9D32A27A-5C7E-1353-32C9-873C4CED4D86</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
