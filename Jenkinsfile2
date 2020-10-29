@@ -36,16 +36,16 @@ pipeline {
   }
   post {
             always {
-                    mail to: 'gaby.z7guate@gmail.com, gaby.z7@hotmail.com',
+                    mail to: 'gaby.z7guate@gmail.com, v.sdb.59@gmail.com,luisvarleon12@gmail.com,gerardo15.chay97@gmail.com,fernandoxhajon122@gmail.com',
                     subject: "Se completo el pipeline de la practica 3",
                     body: "Se ha terminado la construccion de '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisar: ${env.BUILD_URL}"
                 
                 
             }
             failure{
-                mail to: 'gaby.z7guate@gmail.com',
+                mail to: 'gaby.z7guate@gmail.com, v.sdb.59@gmail.com,luisvarleon12@gmail.com,gerardo15.chay97@gmail.com,fernandoxhajon122@gmail.com',
                 subject: "Se completo el pipeline de la practica 3",
-                body: "Se ha terminado la construccion '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisar: ${env.BUILD_URL}. El pipeline fallo"
+                body: "El pipeline fallo. Se ha terminado la construccion '${env.JOB_NAME} ${env.BUILD_NUMBER}', porfavor revisar: ${env.BUILD_URL}."
             }
             
            
