@@ -1,14 +1,41 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LoginComponent } from './login.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Usuario } from '../../models/usuario';
+
+class Login_Service {
+  user:Usuario = {
+    id:0,
+    username:"chay",
+    correo:"gerardo15.chay97@gmail.com",
+    contrasenia:"admin123",
+    nombres:"gerardo",
+    apellidos:"grijalva",
+    cui:"2896asdf",
+    fecha_nacimiento: new Date(),
+    tipo_usuario:0,
+  }
+
+  getUser(user:string, pass:string):Usuario{
+    if(user === this.user.username && pass === this.user.contrasenia)
+      return this.user;
+    
+    return null
+  }
+
+}
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let _login: Login_Service
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ LoginComponent ],
+      imports: [
+        HttpClientTestingModule
+      ]
     })
     .compileComponents();
   }));
@@ -69,6 +96,25 @@ describe('LoginComponent', () => {
       component.ingresar();
       expect(component.message).not.toBe('');
     });
+  });
+
+  describe('Testing para funcion de ingresar con mockup', () => {
+    _login = new Login_Service()
+    it("Credenciales correctas", () => {
+      let retorno:Usuario = _login.getUser("chay","admin123")
+      if(retorno)
+        console.log("success")
+      else
+        console.log("fail")
+    });
+    it("Credenciales incorrectas, retorno de null", () => {
+      let retorno:Usuario = _login.getUser("chay","admin123")
+      if(retorno)
+        console.log("success")
+      else
+        console.log("fail")
+    });
+
   });
 
 });
