@@ -8,7 +8,8 @@ class ApiRoutes {
         this.config();
     }
     config() {
-        this.router.get('/aux/cards', apiController_1.apiController.getCardsAux);
+        this.router.get('/aux/sync', apiController_1.apiController.sync);
+        this.router.get('/aux/tasa', apiController_1.apiController.tasa);
     }
 }
 const apiRoutes = new ApiRoutes();
