@@ -10,7 +10,8 @@ class ApiRoutes{
     }
 
     config():void {
-        this.router.get('/aux/cards', apiController.getCardsAux);
+        this.router.get('/aux/sync', apiController.sync);
+        this.router.get('/aux/tasa', apiController.tasa);
     }
 
 }
