@@ -43,14 +43,15 @@ CREATE TABLE tipo_giftcard (
     image       VARCHAR(300) NOT NULL,
     chargerate  INTEGER NOT NULL,
     active      CHAR(1) NOT NULL,
-    CONSTRAINT tipo_giftcard_pk PRIMARY KEY ( id )
+    CONSTRAINT tipo_giftcard_pk PRIMARY KEY ( id ),
+    CONSTRAINT tipo_giftcard_un UNIQUE ( name )
 );
 
 CREATE TABLE tipo_usuario (
     id            INTEGER NOT NULL AUTO_INCREMENT,
     tipo_usuario  VARCHAR(100) NOT NULL,
     CONSTRAINT tipo_usuario_pk PRIMARY KEY ( id ),
-    CONSTRAINT tipo_usuario__un UNIQUE ( tipo_usuario )
+    CONSTRAINT tipo_usuario_un UNIQUE ( tipo_usuario )
 );
 
 CREATE TABLE usuario (
@@ -67,10 +68,10 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE value (
-    id     INTEGER NOT NULL AUTO_INCREMENT,
+    id     INTEGER NOT NULL,
     value  INTEGER NOT NULL,
     CONSTRAINT value_pk PRIMARY KEY ( id ),
-    CONSTRAINT value__un UNIQUE ( value )
+    CONSTRAINT value_un UNIQUE ( value )
 );
 
 ALTER TABLE availability
