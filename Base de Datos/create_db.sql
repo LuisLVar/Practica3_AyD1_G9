@@ -41,7 +41,7 @@ CREATE TABLE tipo_giftcard (
     id          INTEGER NOT NULL  AUTO_INCREMENT,
     name        VARCHAR(50) NOT NULL,
     image       VARCHAR(300) NOT NULL,
-    chargerate  INTEGER NOT NULL,
+    chargerate  FLOAT NOT NULL,
     active      CHAR(1) NOT NULL,
     CONSTRAINT tipo_giftcard_pk PRIMARY KEY ( id ),
     CONSTRAINT tipo_giftcard_un UNIQUE ( name )
