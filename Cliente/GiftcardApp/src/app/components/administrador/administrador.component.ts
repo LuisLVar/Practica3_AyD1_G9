@@ -22,7 +22,7 @@ export class AdministradorComponent implements OnInit {
 
   tarifa: number = 0;
 
-  catalogo: any;
+  catalogo: any = [];
 
   getTarifa() { 
     this.tarifaService.getTarifa().subscribe(
@@ -47,4 +47,7 @@ export class AdministradorComponent implements OnInit {
       err => console.log(err)
     );
   }
+
+
+  
 }

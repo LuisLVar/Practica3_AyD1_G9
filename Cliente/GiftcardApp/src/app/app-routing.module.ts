@@ -4,11 +4,13 @@ import { AdministradorComponent } from './components/administrador/administrador
 import { LoginComponent } from './components/login/login.component';
 import { CompraGiftcardsComponent } from './components/compra-giftcards/compra-giftcards.component';
 import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
+import { TransacComponent } from './components/transac/transac.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component:  AdministradorComponent},
+  { path: 'admin', component: AdministradorComponent },
+  { path: 'transac', component:  TransacComponent},
   {
     path: 'compra-giftcards',
     component: CompraGiftcardsComponent

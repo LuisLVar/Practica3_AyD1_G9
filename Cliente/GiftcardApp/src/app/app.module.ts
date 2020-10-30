@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CompraGiftcardsComponent } from './components/compra-giftcards/compra-giftcards.component';
 import {CompraGiftcardsService} from '../app/services/compras-gitcards/compra-giftcards.service';
 import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
+import { TransacComponent } from './components/transac/transac.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.com
     AdministradorComponent,
     LoginComponent,
     CompraGiftcardsComponent,
-    PagoTarjetaComponent
+    PagoTarjetaComponent,
+    TransacComponent
   ],
   imports: [
     BrowserModule,

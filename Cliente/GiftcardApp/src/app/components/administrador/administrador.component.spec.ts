@@ -44,6 +44,12 @@ fdescribe('AdministradorComponent', () => {
     });
   });
 
+  describe('Prueba para obtener catalogo', ()=>{
+    it('Arreglo de Arrays debe ser mayor a cero', () => {
+      expect(component.catalogo).toBeDefined();
+    });
+  });
+
 
 
 

@@ -18,7 +18,6 @@ class ApiController {
     // return datos;
     res.json(datos);
   }
-
 }
 
 export const apiController = new ApiController();
