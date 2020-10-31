@@ -14,7 +14,6 @@ pipeline {
      stage('Unit tests') {
             steps { 
                     bat """
-                         c:
                          cd Cliente\\GiftcardApp
                          npm run ng test
                          """
@@ -24,7 +23,6 @@ pipeline {
     stage('Build') {
             steps { 
                     bat """
-                         c:
                          cd Cliente\\GiftcardApp
                          npm run ng build
                          """
