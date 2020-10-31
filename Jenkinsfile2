@@ -7,8 +7,7 @@ pipeline {
     stage('Install') {
         
       steps {  bat """
-                         c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
+                         cd Cliente\\GiftcardApp
                          npm install
                          """ }
     }
