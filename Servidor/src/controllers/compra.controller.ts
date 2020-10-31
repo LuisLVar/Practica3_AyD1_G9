@@ -1,3 +1,4 @@
+import { use } from 'chai';
 import {Request, Response} from 'express';
 import pool from '../database';
 
@@ -36,6 +37,20 @@ class CompraController {
         const historial = await pool.query('call historial_compras(?)', [id_usuario]);
 
         res.json(historial[0]);
+    }
+
+    public async mis_tarjetas(req: Request, res: Response){
+        const {id_usuario} = req.body;
+        const mias = await pool.query("call mis_tarjetas(?)", [id_usuario]);
+        res.json(mias[0]);
+    }
+
+    public async usuarios(req: Request, res: Response){
+        const {id_usuario} = req.body;
+        const user = await pool.query("SELECT us.username, us.id FROM usuario us "+
+        "WHERE us.id != ? and us.tipo_usuario = 2", [id_usuario]);
+
+        res.json(user);
     }
 }
 

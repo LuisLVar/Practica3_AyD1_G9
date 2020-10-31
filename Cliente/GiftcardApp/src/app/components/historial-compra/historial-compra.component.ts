@@ -19,7 +19,7 @@ export class HistorialCompraComponent implements OnInit {
   Listar_compras(){
     //TODO: obtener el id del usuario en sesion
     var data = {
-      id_usuario: 1
+      id_usuario: 2
     }
     this.compra.History(data).subscribe(
       res => {

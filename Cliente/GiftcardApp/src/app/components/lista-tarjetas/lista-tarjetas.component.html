@@ -1,0 +1,66 @@
+<app-menu-cliente></app-menu-cliente>
+<br/>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">nombre</th>
+        <th scope="col">valor</th>
+        <th scope="col">Regalar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of mis_tarjetas; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.value}}</td>
+        <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regalar"
+                (click)="Obtener_Item(item)"
+            >
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="modal" tabindex="-1" id="regalar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reglar Tarjeta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                <label for="formGroupExampleInput">Elegir al usuario</label>
+
+                <select class="custom-select" name="seleccion" [(ngModel)] = "usuario_regalo">
+                    <option selected>Open this select menu</option>
+                    <option [value] = "item.id" *ngFor="let item of usuarios">{{item.username}}</option>
+                </select>
+
+                </div>
+                <div class="form-group">
+                    <p class="card-text">
+                        Tarjeta: {{tarjeta_regalo.name}},
+                        precio: {{tarjeta_regalo.value}}
+                    </p>
+                </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+          <button id="btnGuardar" type="button" class="btn btn-success" data-dismiss="modal"
+            (click)="Enviar_Regalo()"
+          >Aceptar</button>
+        </div>
+      </div>
+    </div>
+</div>

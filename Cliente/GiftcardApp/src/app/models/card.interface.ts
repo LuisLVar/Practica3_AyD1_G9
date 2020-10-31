@@ -17,3 +17,10 @@ export interface Historial {
     no_tarjeta?: string;
     total?: number;
 }
+
+export interface Mis_Tarjetas{
+    id?: string;
+    name?: string;
+    image?: string;
+    value?: number
+}

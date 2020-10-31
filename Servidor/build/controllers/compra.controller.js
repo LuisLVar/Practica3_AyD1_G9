@@ -37,5 +37,20 @@ class CompraController {
             res.json(historial[0]);
         });
     }
+    mis_tarjetas(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id_usuario } = req.body;
+            const mias = yield database_1.default.query("call mis_tarjetas(?)", [id_usuario]);
+            res.json(mias[0]);
+        });
+    }
+    usuarios(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id_usuario } = req.body;
+            const user = yield database_1.default.query("SELECT us.username, us.id FROM usuario us " +
+                "WHERE us.id != ? and us.tipo_usuario = 2", [id_usuario]);
+            res.json(user);
+        });
+    }
 }
 exports.compraController = new CompraController();

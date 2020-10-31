@@ -11,6 +11,8 @@ class CompraRoutes{
     config(): void {
         this.router.post('/pago', compraController.Realizar_compra);
         this.router.post('/historial', compraController.historial_compras);
+        this.router.post('/mias', compraController.mis_tarjetas);
+        this.router.post('/user-rega', compraController.usuarios);
     }
 }
 

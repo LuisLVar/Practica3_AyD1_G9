@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const apiController_1 = require("../controllers/apiController");
 const adminController_1 = require("../controllers/adminController");
-// import pool from '../database';
 class ApiRoutes {
     constructor() {
         this.router = express_1.Router();

@@ -16,6 +16,8 @@ import {CompraGiftcardsService} from '../app/services/compras-gitcards/compra-gi
 import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
 import { TransacComponent } from './components/transac/transac.component';
 import { HistorialCompraComponent } from './components/historial-compra/historial-compra.component';
+import { ListaTarjetasComponent } from './components/lista-tarjetas/lista-tarjetas.component';
+import { MenuClienteComponent } from './components/menu-cliente/menu-cliente.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HistorialCompraComponent } from './components/historial-compra/historia
     CompraGiftcardsComponent,
     PagoTarjetaComponent,
     TransacComponent,
-    HistorialCompraComponent
+    HistorialCompraComponent,
+    ListaTarjetasComponent,
+    MenuClienteComponent
   ],
   imports: [
     BrowserModule,
