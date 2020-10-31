@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Carro, Pago, Tarjeta} from '../../models/pagos.interface';
+import { CompraGiftcardsService } from '../../services/compras-gitcards/compra-giftcards.service';
 
 @Component({
   selector: 'app-pago-tarjeta',
@@ -20,8 +21,9 @@ export class PagoTarjetaComponent implements OnInit {
   public pago: Pago = {};
 
   public codigo: boolean = false;
+  public usuario: any = {};
 
-  constructor() { }
+  constructor(private compraService: CompraGiftcardsService) { }
 
   ngOnInit(): void {
     this.Obtener_Carrito();
@@ -29,9 +31,14 @@ export class PagoTarjetaComponent implements OnInit {
     this.pago.total =  this.Obtener_Total();
   }
 
+  getUser(): void{
+    this.usuario = JSON.parse(localStorage.getItem('usuario'))[0];
+  }
+
 
   Obtener_Carrito(){
     this.carrito = JSON.parse(localStorage.getItem('carro'));
+    localStorage.clear();
     //console.log(this.carrito);
   }
 
@@ -46,14 +53,14 @@ export class PagoTarjetaComponent implements OnInit {
   // Todo cambiar el codigo del dueño
   Dividir_Tarjetas(){
     this.Encriptar();
-
     this.pago.tarjetas = [];
     for (let index = 0; index < this.carrito?.length; index++) {
       const e = this.carrito[index];
       let cantidad = e.cantidad;
       for (let i = 0; i < cantidad; i++) {
         let tarjeta: Tarjeta = {
-          duenio: 0,
+          // TODO: OBTENER EL ID DEL USUARIO EN SESION
+          duenio: 2,
           tipo_giftcard: e.tipo_giftcard,
           value: e.precio,
           codigo: this.Funcion_Generar()
@@ -63,10 +70,18 @@ export class PagoTarjetaComponent implements OnInit {
     }
     console.log(this.pago);
     //console.log(this.pago.no_tarjeta);
+    this.Comprar_tarjeta();
   }
 
-  Cambio_Moneda(){
-
+  Comprar_tarjeta(){
+    this.compraService.Comprar(this.pago).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    )
   }
   
   Verificar_Numero(object: any ){

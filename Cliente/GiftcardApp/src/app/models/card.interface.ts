@@ -11,3 +11,9 @@ export interface Value{
     id: string | number,
     total: string | number
 }
+
+export interface Historial {
+    no_factura?: number;
+    no_tarjeta?: string;
+    total?: number;
+}
