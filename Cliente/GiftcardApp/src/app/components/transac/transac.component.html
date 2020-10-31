@@ -33,16 +33,22 @@
                     <table class="table table-sm table-responsive-sm table-striped table-hover">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col"></th>
-                                <th scope="col">Actualizar</th>
-                                <th scope="col">Eliminar</th>
+                                <th scope="col">Transaccion</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Id GiftCard</th>
+                                <th scope="col">Giftcard</th>
+                                <th scope="col">Valor</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let item of transacciones">
-                                <th scope="row">{{item.ciclo}}</th>
-                                <td>{{item.anio}}</td>
+                                <th scope="row">{{item.factura_no_factura}}</th>
+                                <td>{{item.usuario}}</td>
+                                <td>{{item.nombre}}</td>
+                                <td>{{item.giftcard}}</td>
+                                <td>{{item.tipo_giftcard}}</td>
+                                <td>{{item.value}}</td>
                             </tr>
                         </tbody>
                     </table>

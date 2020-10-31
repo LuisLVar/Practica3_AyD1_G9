@@ -14,4 +14,8 @@ export class AdministradorService {
   getCatalogo() { 
     return this.http.get(`${this.API_URI}/giftcard`);
   }
+
+  getTransacciones() { 
+    return this.http.get(`${this.API_URI}/transaccion`);
+  }
 }
