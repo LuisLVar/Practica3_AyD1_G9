@@ -50,8 +50,4 @@ pipeline {
             
            
         }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> feature/integracion_compras_server
