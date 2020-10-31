@@ -15,7 +15,7 @@ pipeline {
             steps { 
                     bat """
                          c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
+                         cd Cliente\\GiftcardApp
                          npm run ng test
                          """
                     }
@@ -25,7 +25,7 @@ pipeline {
             steps { 
                     bat """
                          c:
-                         cd \"C:\\Users\\gabyz\\OneDrive\\Documents\\GitHub\\Practica3_AyD1_G9\\Cliente\\GiftcardApp"
+                         cd Cliente\\GiftcardApp
                          npm run ng build
                          """
                     }
