@@ -12,6 +12,8 @@ class ApiRoutes {
         this.router.get('/aux/cards', apiController_1.apiController.getCardsAux);
         this.router.get('/values', adminController_1.adminController.getValues);
         this.router.get('/giftcard', adminController_1.adminController.getGiftCards);
+        this.router.post('/giftcard/regalo', adminController_1.adminController.regalarGiftcard);
+        this.router.get('/transaccion', adminController_1.adminController.getTransacciones);
     }
 }
 const apiRoutes = new ApiRoutes();

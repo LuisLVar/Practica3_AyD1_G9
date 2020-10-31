@@ -38,5 +38,32 @@ class AdminController {
             res.json(result);
         });
     }
+    regalarGiftcard(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const data = yield database_1.default.query(`
+    UPDATE giftcard 
+    SET duenio = ?
+    WHERE id = ?`, [req.body.user, req.body.giftcard]);
+            res.json({ estado: true });
+        });
+    }
+    getTransacciones(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const data = yield database_1.default.query(`
+    SELECT d.factura_no_factura, d.giftcard, t.name as tipo_giftcard, CONCAT(u.nombres, u.apellidos) as nombre, u.username as usuario, v.value
+    FROM detalle_factura d
+    INNER JOIN factura f
+    ON f.no_factura = d.factura_no_factura
+    INNER JOIN usuario u
+    ON f.usuario = u.id
+    INNER JOIN giftcard g 
+    ON g.id = d.giftcard
+    INNER JOIN tipo_giftcard t
+    ON t.id = g.tipo_giftcard
+    INNER JOIN value v
+    on v.id = g.value`);
+            res.json(data);
+        });
+    }
 }
 exports.adminController = new AdminController();
