@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CompraGiftcardsComponent } from './compra-giftcards.component';
+import {MenuClienteComponent} from '../menu-cliente/menu-cliente.component';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import { Card, Value } from 'src/app/models/card.interface';
@@ -44,7 +45,7 @@ describe('CompraGiftcardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CompraGiftcardsComponent ],
+      declarations: [ CompraGiftcardsComponent, MenuClienteComponent ],
       imports: [
         HttpClientTestingModule,
         RouterTestingModule

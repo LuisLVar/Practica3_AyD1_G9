@@ -115,7 +115,7 @@ export class PagoTarjetaComponent implements OnInit {
       
     }
     this.pago.no_tarjeta = nuevo;
-    //return nuevo;
+    return nuevo;
   }
 
 }

@@ -12,7 +12,7 @@ class Tarifa {
 
 }
 
-fdescribe('AdministradorComponent', () => {
+describe('AdministradorComponent', () => {
   let component: AdministradorComponent;
   let fixture: ComponentFixture<AdministradorComponent>;
   let tarifa: Tarifa;

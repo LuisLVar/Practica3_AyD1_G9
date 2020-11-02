@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PagoTarjetaComponent } from './pago-tarjeta.component';
+import {MenuClienteComponent} from '../menu-cliente/menu-cliente.component';
 import {Carro} from '../../models/pagos.interface';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
@@ -24,7 +25,7 @@ describe('PagoTarjetaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PagoTarjetaComponent ],
+      declarations: [ PagoTarjetaComponent, MenuClienteComponent ],
       imports: [
         HttpClientTestingModule
       ]
@@ -58,11 +59,18 @@ describe('PagoTarjetaComponent', () => {
   it('Testing funcion Dividir tarjeta, lo que hace es obtener la lista del carrito y asignar un valor alfanumerico a cada una', () =>{
     pagoService = new PagoService();
     component.carrito = pagoService.obtener_carrito();
+    component.pago.no_tarjeta = 1234567891234567;
     component.Dividir_Tarjetas();
     expect(component.pago.tarjetas.length).toBe(5);
     expect(component.pago.tarjetas[0].value).toBe(25);
     expect(component.pago.tarjetas[0].tipo_giftcard).toBe(5);
 
   })
+
+ it("Prueba funcion encriptar tarjeta", ()=>{
+    component.pago.no_tarjeta = 1234567891234567;
+    let resultado = component.Encriptar();
+    expect(resultado).toBe('1234XXXXXXXX4567')
+  });
 
 });
