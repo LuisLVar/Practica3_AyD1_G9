@@ -74,7 +74,7 @@
                     <label for="formGroupExampleInput">Precios</label>
                 </div>
                 <div class="form-group">
-                    <select class="custom-select" name="seleccion" [(ngModel)] = "precio">
+                    <select class="custom-select" id="seleccion" name="seleccion" [(ngModel)] = "precio">
                         <option selected>Open this select menu</option>
                         <option [value] = "item" *ngFor="let item of precios_tarjeta">{{item}}</option>
                     </select>
@@ -83,7 +83,7 @@
 
         </div>
         <div class="modal-footer">
-            <button id="btnGuardar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
             <button id="btnGuardar" type="button" class="btn btn-success" data-dismiss="modal" (click)="Guardar_Compra_Tarjeta()">Guardar</button>
         </div>
       </div>

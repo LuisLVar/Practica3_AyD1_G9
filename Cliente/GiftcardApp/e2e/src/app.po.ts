@@ -33,3 +33,30 @@ export class Login{
   }
 
 }
+
+export class Compra_Tarjetas{
+  name: ElementFinder;
+  cantidad: ElementFinder;
+  seleccion: ElementFinder;
+  btnGuardar: ElementFinder;
+  compra_tarjeta: ElementFinder;
+
+  constructor(){
+    this.name = element(by.id('name'));
+    this.cantidad = element(by.id('cantidad'));
+    this.seleccion = element(by.id("seleccion"));
+    this.btnGuardar = element(by.id("btnGuardar"));
+    this.compra_tarjeta = element(by.id("compra_tarjeta"));
+  }
+
+  async navigateTo(){
+    await browser.get(`${browser.baseUrl}compra-giftcards`);
+  }
+
+  async setValues(name: string, cantidad: number, precio: number){
+    await this.name.sendKeys(name);
+    await this.cantidad.sendKeys(cantidad);
+    await this.seleccion.sendKeys(precio);
+  }
+
+}
