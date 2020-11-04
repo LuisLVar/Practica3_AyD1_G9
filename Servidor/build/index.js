@@ -10,6 +10,7 @@ const morgan_1 = __importDefault(require("morgan")); //se pueden ver las peticio
 const cors_1 = __importDefault(require("cors"));
 const apiRoutes_1 = __importDefault(require("./routes/apiRoutes"));
 const compra_routes_1 = __importDefault(require("./routes/compra.routes"));
+const user_routes_1 = __importDefault(require("./routes/user.routes"));
 class Server {
     constructor() {
         this.app = express_1.default(); //express() devuelve un objeto
@@ -27,6 +28,7 @@ class Server {
     routes() {
         this.app.use('/api', apiRoutes_1.default);
         this.app.use('', compra_routes_1.default);
+        this.app.use('/user', user_routes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
