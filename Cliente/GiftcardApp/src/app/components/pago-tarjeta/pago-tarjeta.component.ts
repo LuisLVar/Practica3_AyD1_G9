@@ -43,7 +43,7 @@ export class PagoTarjetaComponent implements OnInit {
 
   Obtener_Carrito(){
     this.carrito = JSON.parse(localStorage.getItem('carro'));
-    localStorage.clear();
+    localStorage.removeItem('carro');
     //console.log(this.carrito);
   }
 
