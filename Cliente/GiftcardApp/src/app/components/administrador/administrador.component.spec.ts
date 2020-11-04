@@ -12,7 +12,7 @@ class Tarifa {
 
 }
 
-fdescribe('AdministradorComponent', () => {
+describe('AdministradorComponent', () => {
   let component: AdministradorComponent;
   let fixture: ComponentFixture<AdministradorComponent>;
   let tarifa: Tarifa;
@@ -41,6 +41,12 @@ fdescribe('AdministradorComponent', () => {
     it('La tarifa actual es 7.77, debe devolver el numero multiplicado por tarifa', () => {
       tarifa = new Tarifa();
       expect(tarifa.getConversion(5)).toEqual(5*7.77);
+    });
+  });
+
+  describe('Prueba para obtener catalogo', ()=>{
+    it('Arreglo de Arrays debe ser mayor a cero', () => {
+      expect(component.catalogo).toBeDefined();
     });
   });
 

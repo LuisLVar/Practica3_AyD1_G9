@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { apiController } from '../controllers/apiController';
+import { adminController } from '../controllers/adminController';
 import pool from '../database';
 
 class ApiRoutes{
@@ -10,7 +11,13 @@ class ApiRoutes{
     }
 
     config():void {
-        this.router.get('/aux/cards', apiController.getCardsAux);
+        //this.router.get('/aux/cards', apiController.getCardsAux);
+        this.router.get('/values', adminController.getValues);
+        this.router.get('/giftcard', adminController.getGiftCards);
+        this.router.post('/giftcard/regalo', adminController.regalarGiftcard);
+        this.router.get('/transaccion', adminController.getTransacciones);
+        this.router.get('/aux/sync', apiController.sync);
+        this.router.get('/aux/tasa', apiController.tasa);
     }
 
 }

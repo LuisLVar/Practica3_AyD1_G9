@@ -5,4 +5,5 @@ export default{
         password: 'ayd123456789',
         database: 'ayd1_practica3'
     }
+      
 }

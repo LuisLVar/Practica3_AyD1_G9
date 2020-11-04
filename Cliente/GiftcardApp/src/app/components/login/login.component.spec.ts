@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginComponent } from './login.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 import { Usuario } from '../../models/usuario';
 
 class Login_Service {
@@ -34,7 +35,8 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ LoginComponent ],
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        RouterTestingModule
       ]
     })
     .compileComponents();
@@ -58,7 +60,7 @@ describe('LoginComponent', () => {
       expect(component.pass).toEqual('');
     });
     it("Prueba para message, tiene que ser definido ", () => {
-      expect(component.pass).toBeUndefined();
+      expect(component.pass).toBeDefined();
     });
   });
 
@@ -88,13 +90,13 @@ describe('LoginComponent', () => {
     });
     it("Si la variable pass se encuentran vacia, message lanza mensaje de warning", () => {
       component.ingresar();
-      expect(component.message).toEqual("Ingrese contraseña "+"Dato requerido");
+      expect(component.message).toEqual("Ingrese usuario o correo Dato requerido");
     });
     it("Si, todo es correcto se llama a los datos", () => {
       component.user = 'chay'
       component.pass = 'admin123'
       component.ingresar();
-      expect(component.message).not.toBe('');
+      expect(component.message).toBe('');
     });
   });
 
