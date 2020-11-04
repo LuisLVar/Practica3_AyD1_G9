@@ -46,8 +46,8 @@ module.exports = function(config) {
         singleRun: true,
         /*Sirve para jenkins */
         
-        browsers: ['Chrome'],
+        /*browsers: ['Chrome'],
         singleRun: false,
-        restartOnFileChange: true
+        restartOnFileChange: true*/
     });
 };
