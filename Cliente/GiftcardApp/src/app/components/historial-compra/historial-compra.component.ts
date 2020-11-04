@@ -10,7 +10,9 @@ import {Log} from '../../models/usuario';
 export class HistorialCompraComponent implements OnInit {
 
   public historial: Array<Historial> = [];
-  public usuario: Log;
+  public usuario: Log = {
+    id: 0
+  };
 
   constructor(private compra: CompraGiftcardsService) { }
 
@@ -21,7 +23,9 @@ export class HistorialCompraComponent implements OnInit {
   
   getUser(): void{
     this.usuario = <Log>JSON.parse(localStorage.getItem('usuario'));
-    //console.log(this.usuario);
+    if(this.usuario == null){
+      this.usuario = {id:0}
+    }
   }
 
   Listar_compras(){

@@ -42,40 +42,40 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="nombre">Nombres</label>
-              <input class="form-control" type="text" name="nombre" [(ngModel)]="user.nombres">
+              <input class="form-control" type="text" id="nombre" name="nombre" [(ngModel)]="user.nombres">
             </div>
             <div class="form-group col-md-6">
               <label for="apellido">Apellidos</label>
-              <input class="form-control" type="text" name="apellido" [(ngModel)]="user.apellidos">
+              <input class="form-control" type="text" id="apellido" name="apellido" [(ngModel)]="user.apellidos">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="correo">Correo</label>
-              <input class="form-control"  type="email" name="email" [(ngModel)]="user.correo">
+              <input class="form-control"  type="email" id="email" name="email" [(ngModel)]="user.correo">
             </div>
             <div class="form-group col-md-4">
               <label for="correo">Username</label>
-              <input class="form-control"  type="text" name="username" [(ngModel)]="user.username">
+              <input class="form-control"  type="text" id="username" name="username" [(ngModel)]="user.username">
             </div>
             <div class="form-group col-md-4">
               <label for="password">Contraseña</label>
-              <input class="form-control"  type="password" name="password" [(ngModel)]="user.contrasenia">
+              <input class="form-control"  type="password" id="password" name="password" [(ngModel)]="user.contrasenia">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="cui">CUI</label>
-              <input class="form-control"  type="text" name="dpi" [(ngModel)]="user.cui">
+              <input class="form-control"  type="text" id="dpi" name="dpi" [(ngModel)]="user.cui">
             </div>
             <div class="form-group col-md-6">
               <label for="edad">Fecha nacimiento</label>
-              <input class="form-control"  type="date" name="fecha" [(ngModel)]="user.fecha_nacimiento">
+              <input class="form-control"  type="date" id="fecha" name="fecha" [(ngModel)]="user.fecha_nacimiento">
             </div>
           </div>
         </form>
         <div class="text-center">
-          <button type="button" class="btn btn-warning btn-singup" (click)="registrar()">
+          <button type="button" class="btn btn-warning btn-singup" id="btnRegistro" (click)="registrar()">
             <i class="fas fa-sign-in-alt icono"></i> Guardar
           </button>
         </div>

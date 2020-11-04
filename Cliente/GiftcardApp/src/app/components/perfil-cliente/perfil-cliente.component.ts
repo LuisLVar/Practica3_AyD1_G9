@@ -18,6 +18,9 @@ export class PerfilClienteComponent implements OnInit {
 
   get_user(){
     this.usuario = <Log> JSON.parse(localStorage.getItem('usuario'));
+    if(this.usuario == null){
+      this.usuario = {nombres: 'prueba', apellidos: 'prueba', username: "prueba"}
+    }
   }
 
 }

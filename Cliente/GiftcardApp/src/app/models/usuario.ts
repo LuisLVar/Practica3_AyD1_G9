@@ -11,9 +11,9 @@ export interface Usuario{
 }
 
 export interface Log{
-    id: number;
-    nombres: string;
-    apellidos: string;
-    tipo_usuario: number;
-    username: string;
+    id?: number;
+    nombres?: string;
+    apellidos?: string;
+    tipo_usuario?: number;
+    username?: string;
 }

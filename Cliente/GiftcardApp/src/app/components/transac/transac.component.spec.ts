@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TransacComponent } from './transac.component';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('TransacComponent', () => {
   let component: TransacComponent;
@@ -10,7 +11,9 @@ describe('TransacComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ TransacComponent ],
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule,
+        RouterTestingModule
+      ]
     })
     .compileComponents();
   }));

@@ -1,16 +1,17 @@
-import { AppPage, Login, Compra_Tarjetas } from './app.po';
+import { AppPage, Login, Compra_Tarjetas, Registro } from './app.po';
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
   let _login: Login;
-  let _compra: Compra_Tarjetas;
+  let _registro: Registro;
 
+  browser.ignoreSynchronization = true;
 
   beforeEach(() => {
     page = new AppPage();
     _login = new Login();
-    _compra = new Compra_Tarjetas();
+    _registro = new Registro();
   });
 
   /* it('should display welcome message', () => {
@@ -34,15 +35,15 @@ describe('workspace-project App', () => {
     _login.btnSesion.click();
   })
 
-/*   it("Seleccion de tarjeta carrito", ()=>{
-    _compra.navigateTo();
-    _compra.compra_tarjeta.click();
-    _compra.setValues("PlayStation", 10, 50);
-    expect(_compra.name.getAttribute('value')).toBe('PlayStation');
-    expect(_compra.cantidad.getAttribute('value')).toBe(10);
-    expect(_compra.seleccion.getAttribute('value')).toBe(50);
-    _compra.btnGuardar.click();
-  }) */
+  it("registro de persona", ()=> {
+    _registro.navigateTo();
+    _registro.setValues("Fernando", "Chajon","fernando@gmail.com", "felix","123456","32182853", new Date());
+    expect(_registro.inputNombre.getAttribute('value')).toBe("Fernando");
+    expect(_registro.inputApellido.getAttribute('value')).toBe('Chajon');
+    expect(_registro.inputEmail.getAttribute('value')).toBe('fernando@gmail.com');
+    expect(_registro.inputDpi.getAttribute('value')).toBe('32182853');
+    _registro.btnRegistro.click();
+  })
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

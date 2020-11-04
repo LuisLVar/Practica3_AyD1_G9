@@ -14,7 +14,7 @@ export class PagoTarjetaComponent implements OnInit {
   public carrito: Array<Carro> = [];
 
   public check: any = {
-    value1: '0'
+    value1: '1'
   }
 
   public total: number = 0;
@@ -29,12 +29,15 @@ export class PagoTarjetaComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
     this.Obtener_Carrito();
-    this.check.value1 = '0';
+    this.check.value1 = '1';
     this.pago.total =  this.Obtener_Total();
   }
 
   getUser(): void{
     this.usuario = <Log>JSON.parse(localStorage.getItem('usuario'));
+    if(this.usuario == null){
+      this.usuario = {id:0}
+    }
   }
 
 

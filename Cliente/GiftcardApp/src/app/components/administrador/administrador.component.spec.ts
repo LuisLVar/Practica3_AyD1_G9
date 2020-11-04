@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AdministradorComponent } from './administrador.component';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 
 class Tarifa { 
@@ -21,7 +22,8 @@ describe('AdministradorComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AdministradorComponent],
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        RouterTestingModule
         ]
     })
     .compileComponents();

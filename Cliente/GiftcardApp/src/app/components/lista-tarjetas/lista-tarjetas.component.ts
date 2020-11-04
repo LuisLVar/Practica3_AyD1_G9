@@ -28,6 +28,9 @@ export class ListaTarjetasComponent implements OnInit {
 
   getUser(): void{
     this.user = <Log>JSON.parse(localStorage.getItem('usuario'));
+    if(this.user == null){
+      this.user = {id:0}
+    }
   }
 
   Listar_Tarjetas(){

@@ -34,6 +34,48 @@ export class Login{
 
 }
 
+
+export class Registro{
+  inputNombre: ElementFinder
+  inputApellido: ElementFinder;
+  inputEmail: ElementFinder;
+  inputUsername: ElementFinder;
+  inputPass: ElementFinder;
+  inputDpi: ElementFinder;
+  inputFecha: ElementFinder;
+  btnRegistro: ElementFinder;
+  
+  
+  constructor(){
+    this.inputNombre = element(by.id('nombre'));
+    this.inputApellido = element(by.id('apellido'));
+    this.inputEmail = element(by.id('email'));
+    this.inputUsername = element(by.id('username'));
+    this.inputPass = element(by.id('password'));
+    this.inputDpi = element(by.id('dpi'));
+    this.inputFecha = element(by.id('fecha'));
+    this.btnRegistro = element(by.id('btnRegistro'));
+  }
+
+  async navigateTo(){
+    await browser.get(`${browser.baseUrl}registro`);
+  }
+
+  async setValues(
+    nombre: string, apellido: string, email: string, username: string, password: string,
+    dpi: string, fecha: Date
+  ){
+    this.inputNombre.sendKeys(nombre);
+    this.inputApellido.sendKeys(apellido);
+    this.inputEmail.sendKeys(email);
+    this.inputUsername.sendKeys(username);
+    this.inputPass.sendKeys(password);
+    this.inputDpi.sendKeys(dpi);
+    this.inputFecha.sendKeys(fecha.toDateString());
+  }
+
+}
+
 export class Compra_Tarjetas{
   name: ElementFinder;
   cantidad: ElementFinder;
