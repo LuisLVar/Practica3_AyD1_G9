@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { apiController } from '../controllers/apiController';
-// import pool from '../database';
+import pool from '../database';
 
 class ApiRoutes{
     public router: Router = Router();
@@ -10,7 +10,7 @@ class ApiRoutes{
     }
 
     config():void {
-
+        this.router.get('/aux/cards', apiController.getCardsAux);
     }
 
 }

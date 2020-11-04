@@ -1,0 +1,27 @@
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <div class="card border-dark box-card" >
+      <div class="card-header text-center">
+        <h4 class="card-title">
+          <i class="fas fa-user-circle icono"></i> Login
+        </h4>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="inputEmail">Usuario o Correo </label>
+            <input type="email" class="form-control" id="inputEmail" name="user" [(ngModel)]="user">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Contraseña: </label>
+            <input type="password" class="form-control" id="inputPassword" name="pass" [(ngModel)]="pass" >
+          </div>
+          <button type="button" class="btn btn-warning btn-lg btn-singin" (click)="ingresar()" >
+            <i class="fas fa-sign-in-alt icono" ></i> Ingresar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

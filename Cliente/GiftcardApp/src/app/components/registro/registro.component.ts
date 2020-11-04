@@ -11,14 +11,14 @@ export class RegistroComponent implements OnInit {
 
   user:Usuario={
     id:0,
-    username:'',
     correo:'',
     contrasenia:'',
+    username:'',
     nombres:'',
     apellidos:'',
     cui:'',
     fecha_nacimiento: new Date(),
-    tipo_usuario: 1
+    tipo_usuario: 0
   }
 
   constructor(private _register:RegistroService) { }
@@ -27,6 +27,10 @@ export class RegistroComponent implements OnInit {
   }
 
   registrar(){
-
+    delete this.user.id
+    this._register.registro(this.user).subscribe(
+      res => console.log(res),
+      err => console.error(err)
+    )
   }
 }

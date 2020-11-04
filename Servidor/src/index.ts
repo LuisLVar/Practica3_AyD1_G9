@@ -2,8 +2,6 @@
 import express, { Application } from 'express';//lo de los parentesis se define el tipo de dato
 import morgan from 'morgan'; //se pueden ver las peticiones que se hacen
 import cors from 'cors';
-import * as socketio from "socket.io";
-import indexRoutes from './routes/indexRoutes';
 import apiRoutes from './routes/apiRoutes';
 
 class Server {//esta clase iniciara al servidor
@@ -24,7 +22,6 @@ class Server {//esta clase iniciara al servidor
         this.app.use(express.urlencoded({extended:false}));//porsi para usar formato html
     }
     routes():void {//para conf las rutas de mi servidor
-        this.app.use('/', indexRoutes);
         this.app.use('/api', apiRoutes);
     }
     start():void {//inicializar el servidor -> para que el servidor empiece a escuchar

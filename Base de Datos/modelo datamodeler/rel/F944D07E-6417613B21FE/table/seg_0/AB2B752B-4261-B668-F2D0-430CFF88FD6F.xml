@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB2B752B-4261-B668-F2D0-430CFF88FD6F" name="availability">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:00:54 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="value" id="A7491286-5B90-B290-7616-CA42295694DA">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:01:45 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="695871A6-9412-03F1-3594-7D595AF5562F" referredColumn="B18885AD-270F-168D-7946-8C3F8657A4AC"/>
+</associations>
+</Column>
+<Column name="tipo_giftcard" id="47562D56-84D1-F223-CFBE-9E5A736EF740">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:02:04 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0D5C908-0AE0-243E-B75B-B2D0D1DCFD8B" referredColumn="F04C4DBD-20B4-986E-37F3-9FFE89182CCC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBE39D74-BAFA-EE95-0D2F-E229AA17CEA0" name="aviability_value_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:01:45 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7491286-5B90-B290-7616-CA42295694DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8530CDCF-871E-D5C8-4F63-33FDE037268F" name="aviability_tipo_giftcard_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:02:04 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47562D56-84D1-F223-CFBE-9E5A736EF740"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card border-info mb-3">
+        <div class="card-body">
+          <form autocomplete="off">
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Numero Tarjeta</label>
+                <input type="number" class="form-control"
+                name="no_tarjeta" autofocus [(ngModel)]="pago.no_tarjeta">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nombre tarjeta</label>
+                <input type="text" class="form-control"  name="nombre" [(ngModel)]="pago.nombre">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Expiracion MM</label>
+                <input type="number" class="form-control"  name="mes" [(ngModel)]="pago.mes" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Expiracion YY</label>
+                <input type="number" class="form-control"  name="anio" [(ngModel)]="pago.anio" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Codigo</label>
+                <input type="number" class="form-control"  name="cvv2" [(ngModel)]="pago.cvv2">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Monto</label>
+                <input type="number" class="form-control"  name="total" disabled [(ngModel)]="total" >
+              </div>
+
+              <div class="form-group">
+                <label for="nombre_completo">Cambio</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="value1" id="exampleRadios1" value="0" [(ngModel)]="check.value1">
+                  <label class="form-check-label" for="exampleRadios1">
+                    Q
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="value1" id="exampleRadios2" value="1" [(ngModel)]="check.value1">
+                  <label class="form-check-label" for="exampleRadios2">
+                    $
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <button class="btn btn-success btn-block" (click)="Dividir_Tarjetas()" >
+                    Realizar Pago
+                </button>
+              </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

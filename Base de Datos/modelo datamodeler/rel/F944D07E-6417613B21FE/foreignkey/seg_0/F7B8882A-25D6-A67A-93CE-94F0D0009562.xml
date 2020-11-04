@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F7B8882A-25D6-A67A-93CE-94F0D0009562" containerWithKeyObject="ED246D7D-2C8D-AD67-38C2-750C9EB7269F" localFKIndex="31D04678-C44C-5889-D68C-B20EE2450E3F" name="detalle_factura_factura_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:16 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<referredTableLongName>factura</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3ED0F176-F1AA-F4FB-A904-FA82387E4C84</referredTableID>
+<keyObject>75252C2A-BEE7-D4B6-B071-B8D8DB32BECE</keyObject>
+<referredKeyID>75252C2A-BEE7-D4B6-B071-B8D8DB32BECE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>no_factura</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

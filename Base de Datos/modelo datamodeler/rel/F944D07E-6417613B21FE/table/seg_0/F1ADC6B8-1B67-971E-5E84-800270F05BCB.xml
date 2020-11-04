@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F1ADC6B8-1B67-971E-5E84-800270F05BCB" name="giftcard">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 03:53:54 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6148BC6F-60E4-0122-1E96-4B21A5432AB3">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:17:23 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_giftcard" id="627C9103-4AE4-CEC9-F64C-7F8A38BCC857">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:17:51 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DCA8B495-93CC-331E-F0A6-3D60E87F9386" referredColumn="F04C4DBD-20B4-986E-37F3-9FFE89182CCC"/>
+</associations>
+</Column>
+<Column name="duenio" id="11F6CF37-E6EA-88CA-3CC1-95BC513BA98D">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:18:19 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13BF159B-A60D-C714-9168-7876E7268215" referredColumn="9E3B572C-C397-5F17-DDFD-DE45E2048B58"/>
+</associations>
+</Column>
+<Column name="value" id="61EF42D9-2B06-DE40-9BB9-560E6B633C1A">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:18:36 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7302E04C-35AC-28AE-79B2-C429106714C0" referredColumn="B18885AD-270F-168D-7946-8C3F8657A4AC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4AFEC325-59D7-F316-6827-5AC54351A817" name="giftcard_PK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:23:35 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6148BC6F-60E4-0122-1E96-4B21A5432AB3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B063A5D3-2AAB-2D90-B5B0-236B21FAE8D9" name="giftcard_tipo_giftcard_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:17:51 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="627C9103-4AE4-CEC9-F64C-7F8A38BCC857"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6AFFBC95-CBD4-C95B-E05A-2FE141079CC4" name="giftcard_usuario_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:18:19 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11F6CF37-E6EA-88CA-3CC1-95BC513BA98D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="732C4F65-8FB5-4049-32AC-C8B8FB862536" name="giftcard_value_FK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:18:36 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61EF42D9-2B06-DE40-9BB9-560E6B633C1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

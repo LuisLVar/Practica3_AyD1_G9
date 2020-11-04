@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76E2F674-0091-2BF4-E413-F97143AD474A" name="tipo_giftcard">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 03:54:01 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F04C4DBD-20B4-986E-37F3-9FFE89182CCC">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:23:36 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="0A1FDAA5-E614-DDD4-AD1B-22AD234D5116">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:23:57 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image" id="27E4A983-1E07-A71D-A975-F9132FFD03C2">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:25:30 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="chargeRate" id="221262F8-1E74-8B3A-A5F2-53B03780B83C">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:25:30 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="31949F27-909D-AC62-2B39-60F45D659C50">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 04:25:30 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC2AD390-C9DF-F1DC-6833-EAA5A5A9E1AF" name="tipo_giftcard_PK">
+<createdBy>victo</createdBy>
+<createdTime>2020-10-17 17:01:38 UTC</createdTime>
+<ownerDesignName>modelo datamodeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F04C4DBD-20B4-986E-37F3-9FFE89182CCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
