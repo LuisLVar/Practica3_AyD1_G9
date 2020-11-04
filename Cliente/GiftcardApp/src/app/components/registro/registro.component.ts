@@ -10,15 +10,15 @@ import { Usuario } from '../../models/usuario'
 export class RegistroComponent implements OnInit {
 
   user:Usuario={
-    id:'',
+    id:0,
+    username:'',
     correo:'',
-    password:'',
-    nombre:'',
-    apellido:'',
-    dpi:0,
-    edad:0,
-    tarjetas:[],
-    transaccion:[]
+    contrasenia:'',
+    nombres:'',
+    apellidos:'',
+    cui:'',
+    fecha_nacimiento: new Date(),
+    tipo_usuario: 1
   }
 
   constructor(private _register:RegistroService) { }

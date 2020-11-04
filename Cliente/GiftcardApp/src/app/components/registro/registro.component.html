@@ -10,32 +10,32 @@
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="nombre">Nombre</label>
-              <input class="form-control"  type="text" name="nombre">
+              <label for="nombre">Nombres</label>
+              <input class="form-control"  type="text" name="nombre" [(ngModel)]="user.nombres" required>
             </div>
             <div class="form-group col-md-6">
-              <label for="apellido">Apellido</label>
-              <input class="form-control"  type="text" name="apellido">
+              <label for="apellido">Apellidos</label>
+              <input class="form-control"  type="text" name="apellido" [(ngModel)]="user.apellidos" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="correo">Correo</label>
-              <input class="form-control"  type="email" name="email">
+              <input class="form-control"  type="email" name="email" [(ngModel)]="user.correo" required>
             </div>
             <div class="form-group col-md-6">
               <label for="password">Contraseña</label>
-              <input class="form-control"  type="password" name="password">
+              <input class="form-control"  type="password" name="password" [(ngModel)]="user.contrasenia" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="cui">CUI | DPI</label>
-              <input class="form-control"  type="number" name="dpi">
+              <input class="form-control"  type="number" name="dpi" [(ngModel)]="user.cui" required>
             </div>
             <div class="form-group col-md-6">
-              <label for="edad">Edad</label>
-              <input class="form-control"  type="number" name="edad">
+              <label for="edad">Fecha de nacimiento</label>
+              <input class="form-control" type="date" id="fecha" [(ngModel)]="user.fecha_nacimiento" required>
             </div>
           </div>
         </form>
