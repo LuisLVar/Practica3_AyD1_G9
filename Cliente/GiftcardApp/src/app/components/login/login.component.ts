@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private _userService:LoginService, private router:Router) { }
 
   ngOnInit(): void {
+    this.sincronizar();
   }
 
   resetVal(){
@@ -54,5 +55,16 @@ export class LoginComponent implements OnInit {
         }
       )
     }
+  }
+
+  sincronizar(){
+    this._userService.sincronizar_tarjetas().subscribe(
+      res =>{console.log(res)},
+      err => {console.log(err)}
+    )
+    this._userService.sincronizar_tasa().subscribe(
+      res =>{console.log(res)},
+      err => {console.log(err)}
+    )
   }
 }

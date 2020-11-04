@@ -7,6 +7,7 @@
         <th scope="col">#</th>
         <th scope="col">nombre</th>
         <th scope="col">valor</th>
+        <th scope="col">codigo</th>
         <th scope="col">Regalar</th>
       </tr>
     </thead>
@@ -15,6 +16,7 @@
         <th scope="row">{{i+1}}</th>
         <td>{{item.name}}</td>
         <td>{{item.value}}</td>
+        <td>{{item.id}}</td>
         <td>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regalar"
                 (click)="Obtener_Item(item)"

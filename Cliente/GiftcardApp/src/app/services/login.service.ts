@@ -9,8 +9,17 @@ import {Log} from '../models/usuario';
 export class LoginService {
 
   API_URI = 'http://localhost:3000/user';
+  API_URI2 = 'http://localhost:3000/api';
   
   constructor(private http: HttpClient) { }
 
   logIn = (loguearse:any):Observable<Log> => this.http.post<Log>(`${this.API_URI}/login`,loguearse)
+
+  sincronizar_tarjetas(){
+    return this.http.get(`${this.API_URI2}/aux/sync`);
+  }
+
+  sincronizar_tasa(){
+    return this.http.get(`${this.API_URI2}/aux/tasa`);
+  }
 }
