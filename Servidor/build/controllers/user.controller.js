@@ -26,5 +26,17 @@ class UserController {
             res.json(usuario[0]);
         });
     }
+    Registro(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { correo, contrasenia, username, nombres, apellidos, cui, fecha_nacimiento, tipo_usuario } = req.body;
+            yield database_1.default.query(`
+            INSERT INTO usuario(username, correo, contrasenia, nombres, apellidos, cui, fecha_nacimiento, tipo_usuario)
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+        `, [username, correo, contrasenia, nombres, apellidos, cui, fecha_nacimiento, tipo_usuario]);
+            res.json({
+                code: 200
+            });
+        });
+    }
 }
 exports.userController = new UserController();

@@ -18,7 +18,7 @@ export class RegistroComponent implements OnInit {
     apellidos:'',
     cui:'',
     fecha_nacimiento: new Date(),
-    tipo_usuario: 0
+    tipo_usuario: 2
   }
 
   constructor(private _register:RegistroService) { }
@@ -29,8 +29,22 @@ export class RegistroComponent implements OnInit {
   registrar(){
     delete this.user.id
     this._register.registro(this.user).subscribe(
-      res => console.log(res),
+      res => {
+        console.log(res)
+        this.Limpiar();
+        alert("Registro exitoso");
+      }  ,
       err => console.error(err)
     )
+  }
+
+  Limpiar(){
+    this.user.nombres = '';
+    this.user.apellidos = '';
+    this.user.contrasenia = '';
+    this.user.correo = '';
+    this.user.username = '';
+    this.user.cui = '';
+
   }
 }

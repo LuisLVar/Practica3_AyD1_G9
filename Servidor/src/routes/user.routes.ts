@@ -12,6 +12,7 @@ class UserRoutes{
 
     config(){
         this.router.post('/login', userController.GetUser);
+        this.router.post('/registro', userController.Registro);
     }
 
 }

@@ -9,7 +9,7 @@ import { Usuario } from '../models/usuario';
 })
 export class RegistroService {
 
-  API_URI = 'http://localhost:3000/api';
+  API_URI = 'http://localhost:3000/user';
   
   constructor(private http: HttpClient) { }
 
