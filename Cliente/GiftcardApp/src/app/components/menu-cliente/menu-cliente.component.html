@@ -7,27 +7,36 @@
   
       <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/perfil" routerLinkActive="active">
+              <i class="fas fa-login icono"></i> Perfil
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" routerLink="/compra-giftcards" routerLinkActive="active">
-              <i class="fas fa-male icono"></i> Comprar
+              <i class="fas fa-shopping icono"></i> Comprar
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/historial" routerLinkActive="active">
-              <i class="fas fa-comments icono"></i> Historial de Compras
+              <i class="fas fa-book icono"></i> Historial de Compras
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/tarjetas" routerLinkActive="active">
-              <i class="fas fa-comments icono"></i> Mis tarjetas
+              <i class="fas fa-card_giftcard icono"></i> Mis tarjetas
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" (click)="Limpiar()" routerLink="/login" routerLinkActive="active">
-              <i class="fas fa-comments icono"></i> Salir
+              <i class="fas fa-login icono"></i> Salir
             </a>
           </li>
+
+          
         </ul>
       </div>
     </div>
