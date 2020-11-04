@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdministradorService } from 'src/app/services/administrador/administrador.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class TransacComponent implements OnInit {
 
   transacciones: any;
 
-  constructor(private adminService : AdministradorService) { }
+  constructor(private adminService : AdministradorService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -25,6 +26,15 @@ export class TransacComponent implements OnInit {
       },
       err => console.log(err)
     );
+  }
+
+  cerrarSesion() { 
+    var r = confirm("Seguro que quieres cerrar sesion?");
+    console.log(r);
+    if (r) {
+      localStorage.setItem('usuario', JSON.stringify([]));
+      this.router.navigate(['/login']);
+    } 
   }
 
 

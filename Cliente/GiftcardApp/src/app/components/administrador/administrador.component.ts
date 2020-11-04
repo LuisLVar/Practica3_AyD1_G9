@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TarifaService } from '../../services/tarifa/tarifa.service';
 import { AdministradorService } from '../../services/administrador/administrador.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrador',
@@ -9,7 +10,7 @@ import { AdministradorService } from '../../services/administrador/administrador
 })
 export class AdministradorComponent implements OnInit {
 
-  constructor(private tarifaService: TarifaService, private adminService : AdministradorService) { }
+  constructor(private tarifaService: TarifaService, private adminService : AdministradorService, private router: Router) { }
 
   ngOnInit(): void {
     // this.getTarifa();
@@ -48,6 +49,14 @@ export class AdministradorComponent implements OnInit {
     );
   }
 
+  cerrarSesion() { 
+    var r = confirm("Seguro que quieres cerrar sesion?");
+    console.log(r);
+    if (r) {
+      localStorage.setItem('usuario', JSON.stringify([]));
+      this.router.navigate(['/login']);
+    } 
+  }
 
   
 }
