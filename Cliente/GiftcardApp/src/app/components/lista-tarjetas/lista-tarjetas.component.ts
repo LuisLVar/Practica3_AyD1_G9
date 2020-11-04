@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Mis_Tarjetas} from '../../models/card.interface';
 import {CompraGiftcardsService} from '../../services/compras-gitcards/compra-giftcards.service';
 
+import {Log} from '../../models/usuario';
+
 @Component({
   selector: 'app-lista-tarjetas',
   templateUrl: './lista-tarjetas.component.html',
@@ -14,17 +16,24 @@ export class ListaTarjetasComponent implements OnInit {
   public usuario_regalo: number;
   public tarjeta_regalo: Mis_Tarjetas = {};
 
+  public user: Log;
+
   constructor(private http: CompraGiftcardsService) { }
 
   ngOnInit(): void {
+    this.getUser();
     this.Listar_Tarjetas();
     this.Listar_usuarios();
+  }
+
+  getUser(): void{
+    this.user = <Log>JSON.parse(localStorage.getItem('usuario'));
   }
 
   Listar_Tarjetas(){
     //TODO: cambiar el id del usuario por el logueado
     var data = {
-      id_usuario: 2
+      id_usuario: this.user.id
     };
 
     this.http.Mis_tarjetas(data).subscribe(
