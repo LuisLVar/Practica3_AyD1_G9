@@ -13,6 +13,11 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
+    /**Comentar esto */
+    chromeOptions: {
+      args: [ "--headless" ]
+    },
+    /**Comentar esto */
     browserName: 'chrome'
   },
   directConnect: true,
