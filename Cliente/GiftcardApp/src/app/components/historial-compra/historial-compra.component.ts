@@ -21,7 +21,7 @@ export class HistorialCompraComponent implements OnInit {
   
   getUser(): void{
     this.usuario = <Log>JSON.parse(localStorage.getItem('usuario'));
-    console.log(this.usuario);
+    //console.log(this.usuario);
   }
 
   Listar_compras(){
