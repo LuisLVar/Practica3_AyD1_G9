@@ -8,6 +8,7 @@ import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.com
 import { TransacComponent } from './components/transac/transac.component';
 import {HistorialCompraComponent} from './components/historial-compra/historial-compra.component';
 import {ListaTarjetasComponent} from './components/lista-tarjetas/lista-tarjetas.component';
+import {PerfilClienteComponent} from './components/perfil-cliente/perfil-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
     component: PagoTarjetaComponent
   },
   {path: 'historial', component:HistorialCompraComponent },
-  {path: 'tarjetas', component: ListaTarjetasComponent}
+  {path: 'tarjetas', component: ListaTarjetasComponent},
+  {path: 'perfil', component: PerfilClienteComponent}
 ];
 
 

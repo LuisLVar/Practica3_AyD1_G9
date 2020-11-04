@@ -15,6 +15,7 @@ import { TransacComponent } from './components/transac/transac.component';
 import { HistorialCompraComponent } from './components/historial-compra/historial-compra.component';
 import { ListaTarjetasComponent } from './components/lista-tarjetas/lista-tarjetas.component';
 import { MenuClienteComponent } from './components/menu-cliente/menu-cliente.component';
+import { PerfilClienteComponent } from './components/perfil-cliente/perfil-cliente.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MenuClienteComponent } from './components/menu-cliente/menu-cliente.com
     TransacComponent,
     HistorialCompraComponent,
     ListaTarjetasComponent,
-    MenuClienteComponent
+    MenuClienteComponent,
+    PerfilClienteComponent
   ],
   imports: [
     BrowserModule,

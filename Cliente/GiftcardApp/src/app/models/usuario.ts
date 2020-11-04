@@ -9,3 +9,11 @@ export interface Usuario{
     fecha_nacimiento?: Date,
     tipo_usuario?:number
 }
+
+export interface Log{
+    id: number;
+    nombres: string;
+    apellidos: string;
+    tipo_usuario: number;
+    username: string;
+}

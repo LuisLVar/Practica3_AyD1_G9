@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
+import {Log} from '../../models/usuario';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,11 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  user:string = ''
-  pass:string = ''
-  message:string = ''
+  user:string = '';
+  pass:string = '';
+  message:string = '';
+
+  private user_logueado: Log;
 
   constructor(private _userService:LoginService, private router:Router) { }
 
@@ -36,9 +39,14 @@ export class LoginComponent implements OnInit {
     else{
       this._userService.logIn({user:this.user, password: this.pass}).subscribe(
         (res) => {
-          localStorage.setItem('usuario', JSON.stringify(res));
+          this.user_logueado = res;
+          localStorage.setItem('usuario', JSON.stringify(this.user_logueado));
           this.resetVal()
-          this.router.navigate(['/admin']);
+          if(this.user_logueado.tipo_usuario === 1){
+            this.router.navigate(['/admin']);
+          }else if (this.user_logueado.tipo_usuario === 2){
+            this.router.navigate(['/compra-giftcards'])
+          }
         },
         err => {
           console.error(err);

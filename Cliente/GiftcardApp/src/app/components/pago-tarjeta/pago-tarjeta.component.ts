@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Carro, Pago, Tarjeta} from '../../models/pagos.interface';
 import { CompraGiftcardsService } from '../../services/compras-gitcards/compra-giftcards.service';
+import {Log} from '../../models/usuario';
 
 @Component({
   selector: 'app-pago-tarjeta',
@@ -21,18 +22,19 @@ export class PagoTarjetaComponent implements OnInit {
   public pago: Pago = {};
 
   public codigo: boolean = false;
-  public usuario: any = {};
+  public usuario: Log;
 
   constructor(private compraService: CompraGiftcardsService) { }
 
   ngOnInit(): void {
+    this.getUser();
     this.Obtener_Carrito();
     this.check.value1 = '0';
     this.pago.total =  this.Obtener_Total();
   }
 
   getUser(): void{
-    this.usuario = JSON.parse(localStorage.getItem('usuario'))[0];
+    this.usuario = <Log>JSON.parse(localStorage.getItem('usuario'));
   }
 
 
@@ -60,7 +62,7 @@ export class PagoTarjetaComponent implements OnInit {
       for (let i = 0; i < cantidad; i++) {
         let tarjeta: Tarjeta = {
           // TODO: OBTENER EL ID DEL USUARIO EN SESION
-          duenio: 2,
+          duenio: this.usuario.id,
           tipo_giftcard: e.tipo_giftcard,
           value: e.precio,
           codigo: this.Funcion_Generar()

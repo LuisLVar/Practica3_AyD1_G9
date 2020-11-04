@@ -12,4 +12,8 @@ export class MenuClienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Limpiar(){
+    localStorage.clear();
+  }
+
 }
