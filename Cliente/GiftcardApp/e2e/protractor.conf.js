@@ -14,9 +14,9 @@ exports.config = {
   ],
   capabilities: {
     /**Comentar esto */
-    chromeOptions: {
+    /*chromeOptions: {
       args: [ "--headless" ]
-    },
+    },*/
     /**Comentar esto */
     browserName: 'chrome'
   },

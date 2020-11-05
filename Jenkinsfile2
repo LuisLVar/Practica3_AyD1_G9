@@ -19,6 +19,14 @@ pipeline {
                          """
                     }
         }
+    stage('E2E') {
+            steps { 
+                    bat """
+                         cd Cliente\\GiftcardApp
+                         npm run ng e2e
+                         """
+                    }
+        }
 
     stage('Build') {
             steps { 
